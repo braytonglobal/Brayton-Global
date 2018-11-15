@@ -7,7 +7,6 @@ $(window).on('resize',function(){
 	return false;
 });
 
-
 // Show / hide menu
 var menuItems = $('.page-menu');
 var menuIcon = $('.menu-icon');
@@ -22,14 +21,18 @@ menuIcon.on('click', function () {
 	} else {
 		menuItems.addClass('menu-visible');
 	}
+	setTimeout(hideMenu, 4000);
 });
-$(".page-main").on('click',function(){
+
+var hideMenu = function(){
 	if (menuItems.hasClass('menu-visible')) {
 		menuIcon.removeClass('menu-visible');
 		menuItems.removeClass('menu-visible');
 	}
 	return true;
-});
+};
+
+$(".page-main").on('click', hideMenu);
 // Smooth scroll <a> links 
 var $root = $('html, body');
 $('a.s-scroll').on('click',function() {
@@ -38,7 +41,7 @@ $('a.s-scroll').on('click',function() {
         scrollTop: $(href).offset().top
     }, 500, function () {
         window.location.hash = href;
-    });
+	});
     return false;
 });
 
