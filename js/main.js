@@ -21,7 +21,7 @@ menuIcon.on('click', function () {
 	} else {
 		menuItems.addClass('menu-visible');
 	}
-	setTimeout(hideMenu, 4000);
+	setTimeout(hideMenu, 10000);
 });
 
 var hideMenu = function(){
