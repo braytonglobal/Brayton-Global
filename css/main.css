@@ -1201,11 +1201,11 @@ strong,
 /* about section / .section-about */
 .section-about .content .c-left {
   float: left;
-  width: 66%;
+  width: 62%;
   padding-right: 64px; }
 .section-about .content .c-right {
   float: right;
-  width: 34%; }
+  width: 38%; }
 
 /* 3.4 Projects/Feature/Contact address list / .section .c-features */
 .section .content {
