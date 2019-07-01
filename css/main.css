@@ -20,7 +20,8 @@ http://themeforest.net/licenses
 		3.3 About page section / .section-about
 		3.4 Projects/Feature/Contact address list / .section .c-features
 		3.5 Gallery grid list / .section .gallery-slides .c-gallery
-		3.6 Contact page section and forms / 
+		3.6 Contact page section and forms /
+		3.7 Customers page section lists
 	4. Item detail slides / item.html : #itemdetail-page , .section.page-slides .slide
 	5. Footer / .site-footer
 	6. Responsiveness
@@ -422,8 +423,8 @@ strong,
   z-index: 2;
   background: #ffffff;
   height: 200%;
-  padding: 32px;
-  padding-top: 280px;
+  padding: 50px;
+  padding-top: 240px;
   width: 200px;
   padding-right: 0;
   -webkit-transform: rotate(45deg) translateY(-300px);
@@ -2848,6 +2849,17 @@ strong,
           transform: none;
   -webkit-transition-delay: 1s;
           transition-delay: 1s; }
+
+/*3.7 Customers page section lists*/
+.asset-list>li {
+  list-style: disc;
+  margin-bottom: 5px !important;
+  padding: 0 !important;
+}
+.customer-description {
+  padding-top:45px;
+}
+
 
 /* 4. Item detail slides / item.html : #itemdetail-page , .section.page-slides .slide */
 .page-item-detail .page-header {
