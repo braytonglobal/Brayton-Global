@@ -2907,6 +2907,18 @@ strong,
   flex-wrap: wrap;
 }
 
+.section-brayton-academy .send-btn {
+  background-color: #4394e5;
+  border: none;
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-bottom: 2px;
+}
+
+.section-brayton-academy .send-btn:focus {
+  outline: none;
+}
+
 /* 4. Item detail slides / item.html : #itemdetail-page , .section.page-slides .slide */
 .page-item-detail .page-header {
   position: fixed;

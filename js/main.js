@@ -431,3 +431,10 @@ text_message_elem.oninput = function(e) {
 	e.target.setCustomValidity("");
 };
 */
+
+//send contact email
+function send(){
+	document.getElementById('form').action = "mailto:info@braytonglobal.com?subject="
+		+ document.getElementById('subject').value
+		+ "&body=" + document.getElementById("mail-body").value;
+}
