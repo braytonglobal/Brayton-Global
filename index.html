@@ -405,24 +405,40 @@
                         </div>
                     </div>
                 </div>
-                <div class="c-card anim">
-                    <div class="card-wrapper">
-                        <!-- card content -->
-                        <div class="c-content">
-                            <h3 class="card-h3">More information</h3>
-                            <form action="#" onsubmit="send()" method="get" enctype="text/plain" id="form">
-                                <select name="subject" id="subject">
-                                    <option value="Information request">Information request</option>
-                                    <option value="Quote request">Quote request</option>
-                                </select>
-                                <textarea type="text" name="body" id="mail-body" rows="4"></textarea>
-                                <input class="send-btn" type="submit" value="Send">
-                            </form>
-                        </div>
+                <div class="c-card c-form anim">
+                    <!-- card content -->
+                    <div class="c-content card-wrapper">
+                        <form class="message form send-message-form" action="#" onsubmit="send()" method="get"
+                              enctype="text/plain" id="form">
+                            <div class="form-header clearfix">
+                                <h3>Write to us</h3>
+                                <div class="btns">
+                                    <button class="btn email_b" type="submit" value="Send">Send</button>
+                                </div>
+                            </div>
+                            <div class="fields clearfix">
+                                <div class="input">
+                                    <label for="subject">Subject </label>
+                                    <select name="subject" id="subject" required aria-required="true" class="valid" aria-invalid="false">
+                                        <option value="Information request">Information request</option>
+                                        <option value="Quote request">Quote request</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="fields clearfix no-border">
+                                <div class="input">
+                                    <label for="mail-body">Message </label>
+                                    <textarea type="text" name="body" id="mail-body" placeholder="..." rows="4"
+                                              required aria-required="true" class="valid"
+                                              aria-invalid="false"></textarea>
+                                    <label id="mail-body-error" class="error valid" for="mail-body"></label>
+                                </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </section>
+    </div>
+    </section>
     </div>
     <!-- End of customers section -->
 
@@ -501,29 +517,29 @@
 
                         <!-- illustration / pictures -->
                         <!--<div class="c-illustr">-->
-                            <!--<div class="img-wrapper">-->
-                                <!--&lt;!&ndash; slider images &ndash;&gt;-->
-                                <!--<div class="slider-img slides owl-carousel">-->
-                                    <!--<div class="slide-item">-->
-                                        <!--<img src="img/bg/bg-1.jpg" alt="slide pict">-->
-                                    <!--</div>-->
-                                    <!--<div class="slide-item">-->
-                                        <!--<img src="img/bg/bg-2.jpg" alt="slide pict">-->
-                                    <!--</div>-->
-                                    <!--<div class="slide-item">-->
-                                        <!--<img src="img/bg/bg-3.jpg" alt="slide pict">-->
-                                    <!--</div>-->
-                                    <!--<div class="slide-item">-->
-                                        <!--<img src="img/bg/bg-4.jpg" alt="slide pict">-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                                <!--&lt;!&ndash; only one image &ndash;&gt;-->
-                                <!--&lt;!&ndash;<div class="single-img slides">-->
-                                    <!--<div class="slide-item">-->
-                                        <!--<img src="img/bg-sample1.jpg" alt="slide pict">-->
-                                    <!--</div>-->
-                                <!--</div>&ndash;&gt;-->
-                            <!--</div>-->
+                        <!--<div class="img-wrapper">-->
+                        <!--&lt;!&ndash; slider images &ndash;&gt;-->
+                        <!--<div class="slider-img slides owl-carousel">-->
+                        <!--<div class="slide-item">-->
+                        <!--<img src="img/bg/bg-1.jpg" alt="slide pict">-->
+                        <!--</div>-->
+                        <!--<div class="slide-item">-->
+                        <!--<img src="img/bg/bg-2.jpg" alt="slide pict">-->
+                        <!--</div>-->
+                        <!--<div class="slide-item">-->
+                        <!--<img src="img/bg/bg-3.jpg" alt="slide pict">-->
+                        <!--</div>-->
+                        <!--<div class="slide-item">-->
+                        <!--<img src="img/bg/bg-4.jpg" alt="slide pict">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; only one image &ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="single-img slides">-->
+                        <!--<div class="slide-item">-->
+                        <!--<img src="img/bg-sample1.jpg" alt="slide pict">-->
+                        <!--</div>-->
+                        <!--</div>&ndash;&gt;-->
+                        <!--</div>-->
                         <!--</div>-->
                         <!-- card content -->
                         <div class="c-content text-right">
