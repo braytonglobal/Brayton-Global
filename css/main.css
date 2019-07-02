@@ -22,6 +22,7 @@ http://themeforest.net/licenses
 		3.5 Gallery grid list / .section .gallery-slides .c-gallery
 		3.6 Contact page section and forms /
 		3.7 Customers page section lists
+		3.8 Brayton academy page section / .section-brayton-academy
 	4. Item detail slides / item.html : #itemdetail-page , .section.page-slides .slide
 	5. Footer / .site-footer
 	6. Responsiveness
@@ -425,7 +426,7 @@ strong,
   height: 200%;
   padding: 50px;
   padding-top: 240px;
-  width: 200px;
+  width: 220px;
   padding-right: 0;
   -webkit-transform: rotate(45deg) translateY(-300px);
       -ms-transform: rotate(45deg) translateY(-300px);
@@ -2851,7 +2852,7 @@ strong,
           transition-delay: 1s; }
 
 /*3.7 Customers page section lists*/
-.asset-list>li {
+.small-list>li {
   list-style: disc;
   margin-bottom: 5px !important;
   padding: 0 !important;
@@ -2860,6 +2861,50 @@ strong,
   padding-top:45px;
 }
 
+/*3.8 Brayton academy page section / .section-brayton-academy*/
+
+.section-brayton-academy h3:after {
+  display: none !important;
+}
+
+.section-brayton-academy .c-card {
+  width: 205px;
+}
+.section-brayton-academy .card-wrapper {
+  padding: 5px !important;
+}
+.section-brayton-academy .card-wrapper:after {
+  display: none !important;
+}
+.section-brayton-academy .c-card .c-illustr {
+  height: 100px;
+}
+.section-brayton-academy .c-card .img-wrapper {
+  height: 100% !important;
+  display: flex !important;
+  justify-content: center;
+}
+.section-brayton-academy .c-card .img-wrapper>img{
+  height: 100%;
+}
+.section-brayton-academy .c-content{
+  padding-top: 12px;
+}
+
+.section-brayton-academy .left-card {
+  margin: 0 50px 10px 0;
+}
+.content-detail {
+  padding-left: 10px;
+}
+.content-detail>p {
+  margin-bottom: 0;
+}
+
+.section-brayton-academy .cards {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 /* 4. Item detail slides / item.html : #itemdetail-page , .section.page-slides .slide */
 .page-item-detail .page-header {
