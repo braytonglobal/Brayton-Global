@@ -793,7 +793,7 @@ strong,
         background: #4394e5; }
     .section .content .c-card .c-content {
       text-align: left;
-      padding: 16px;
+      padding: 5px;
       padding-top: 32px; }
       .section .content .c-card .c-content.text-right {
         text-align: right; }
@@ -808,17 +808,17 @@ strong,
         font-family: "Roboto Condensed", "League Gothic";
         font-size: 16px;
         position: relative; }
-        .section .content .c-card .c-content h3:after {
-          position: relative;
-          height: 16px;
-          width: 16px;
-          content: "";
-          background: #4394e5;
-          border-radius: 16px;
-          display: inline-block;
-          margin-left: 8px;
-          margin-top: -4px;
-          vertical-align: middle; }
+        /*.section .content .c-card .c-content h3:after {*/
+          /*position: relative;*/
+          /*height: 16px;*/
+          /*width: 16px;*/
+          /*content: "";*/
+          /*background: #4394e5;*/
+          /*border-radius: 16px;*/
+          /*display: inline-block;*/
+          /*margin-left: 8px;*/
+          /*margin-top: -4px;*/
+          /*vertical-align: middle; }*/
       .section .content .c-card .c-content p {
         color: #1d1d1d;
         font-family: "Roboto", "Helvetica", sans-serif;
@@ -1201,13 +1201,18 @@ strong,
 
 /* 3.3 About page section / .section-about */
 /* about section / .section-about */
+.section-about .c-content:after {
+  display: none !important;
+}
 .section-about .content .c-left {
   float: left;
   width: 62%;
   padding-right: 64px; }
 .section-about .content .c-right {
   float: right;
-  width: 38%; }
+  width: 38%;
+  margin-top: 50vh;
+}
 
 /* 3.4 Projects/Feature/Contact address list / .section .c-features */
 .section .content {
@@ -2863,17 +2868,13 @@ strong,
 
 /*3.8 Brayton academy page section / .section-brayton-academy*/
 
-.section-brayton-academy h3:after {
-  display: none !important;
-}
-
 .section-brayton-academy .c-card {
   width: 205px;
 }
 .section-brayton-academy .card-wrapper {
   padding: 5px !important;
 }
-.section-brayton-academy .card-wrapper:after {
+.card-wrapper:after {
   display: none !important;
 }
 .section-brayton-academy .c-card .c-illustr {
@@ -2904,6 +2905,18 @@ strong,
 .section-brayton-academy .cards {
   display: flex;
   flex-wrap: wrap;
+}
+
+.section-brayton-academy .send-btn {
+  background-color: #4394e5;
+  border: none;
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-bottom: 2px;
+}
+
+.section-brayton-academy .send-btn:focus {
+  outline: none;
 }
 
 /* 4. Item detail slides / item.html : #itemdetail-page , .section.page-slides .slide */
@@ -3478,7 +3491,9 @@ strong,
     padding-right: 0px; }
   .section-about .content .c-right {
     float: none;
-    width: 100%; }
+    width: 100%;
+    margin-top: 10px;
+  }
 
   .section-contact .contact-footer {
     padding-left: 64px;
