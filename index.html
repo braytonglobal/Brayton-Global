@@ -384,7 +384,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="c-card anim">
+
+                <div class="c-card left-card anim">
+
                     <div class="card-wrapper">
                         <!-- illustration / pictures -->
                         <div class="c-illustr">
@@ -405,8 +407,24 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <div class="c-card anim">
+                    <div class="card-wrapper">
+                        <!-- card content -->
+                        <div class="c-content">
+                            <h3 class="card-h3">More information</h3>
+                            <form action="#" onsubmit="send()" method="post" enctype="text/plain" id="form">
+                                <select id="subject">
+                                    <option value="Information request">Information request</option>
+                                    <option value="Quote request">Quote request</option>
+                                </select>
+                                <textarea type="text" name="body" id="mail-body" rows="4"></textarea>
+                                <input class="send-btn" type="submit" value="Send">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     <!-- End of customers section -->
