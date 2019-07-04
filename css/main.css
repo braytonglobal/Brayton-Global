@@ -657,7 +657,7 @@ strong,
   overflow: hidden; }
   .page-cover .cover-bg {
     /*  Page cover background image,color */
-    background: url(../img/bg-default.jpg);
+    background: url(../img/bg/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1002,7 +1002,9 @@ strong,
     z-index: 1;
     text-align: center;
     max-width: 720px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-top: 50px;
+  }
     .section-home .content .c-text .title-desc {
       position: relative;
       overflow: hidden;

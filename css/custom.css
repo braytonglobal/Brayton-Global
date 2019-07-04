@@ -1,0 +1,13 @@
+/*Colors*/
+/*orange : #dd7627 */
+/*darkgrey : #19242F */
+/*grey : #B4B4BA */
+
+.section-home {
+    background-image: url("../img/bg/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
