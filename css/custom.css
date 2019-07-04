@@ -11,3 +11,38 @@
     background-attachment: fixed;
     z-index: -1;
 }
+
+/*Override template colors*/
+a {
+    color: #dd7627; }
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
+    background: #dd7627;
+}
+
+#fp-nav ul li a.active span:before, .fp-slidesNav ul li a.active span:before {
+    background: #dd7627;
+}
+
+.section-home .content .c-text .home-btns .btn:before, .section-home .content .c-text .home-btns .btn:after {
+    background: #dd7627;
+}
+
+.section-home .content .c-text .home-btns .btn:hover span {
+    color: #dd7627;
+}
+
+.section-home .content .c-text .home-btns .btn span:after {
+    background: #dd7627;
+}
+
+.site-footer .note .marked {
+    color: #dd7627;
+}
+
+.page-menu li.active .icon {
+    background: #dd7627;
+}
+
+.page-menu li:not(.active):hover .icon {
+    color: #dd7627; }
