@@ -63,6 +63,14 @@ a {
     color: #B4B4BA;
 }
 
+.section-contact .contact-footer h3 {
+    color: #dd7627;
+}
+
+.section-contact .contact-footer:before {
+    border-top: 1px solid #dd7627;
+}
+
 
 /*Column with logo and description*/
 .logo-row {
