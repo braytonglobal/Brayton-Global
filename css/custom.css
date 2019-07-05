@@ -12,6 +12,11 @@
     z-index: -1;
 }
 
+.subtitle {
+    text-indent: 30px;
+    font-size: 22px;
+}
+
 /*Override template colors*/
 a {
     color: #dd7627; }
@@ -145,7 +150,7 @@ a {
     height: 80px;
 }
 
-.section-home .subtitle:after, .section-home .subtitle:before {
+.section-home .home-subtitle:after, .section-home .home-subtitle:before {
     display: none;
 }
 
@@ -158,6 +163,8 @@ a {
     margin-left: 20px;
     color: #dd7627 !important;
 }
+
+
 
 /*About us section */
 .section-about .c-features li {
