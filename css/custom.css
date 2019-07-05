@@ -122,6 +122,43 @@ a {
     font-size: 12px;
 }
 
+/*Home section*/
+
+.section-home .content .c-text .title-desc {
+    display: flex;
+    justify-content: center;
+}
+
+.section-home.active.anim .c-text .title-desc .t-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.section-home .content .c-text .c-logo {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section-home .content .c-text .c-logo img {
+    height: 80px;
+}
+
+.section-home .subtitle:after, .section-home .subtitle:before {
+    display: none;
+}
+
+.header.home-title {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header.home-title .orange {
+    margin-left: 20px;
+    color: #dd7627 !important;
+}
+
 /*About us section */
 .section-about .c-features li {
     width: 100%;
