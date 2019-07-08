@@ -347,3 +347,11 @@ a {
     width: 100%;
     padding-right: 0 !important;
 }
+
+.h3-subtitle {
+    text-indent: 70px;
+    text-align: left;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 18px;
+    color: #B4B4BA;
+}
