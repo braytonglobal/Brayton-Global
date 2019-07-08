@@ -92,6 +92,19 @@ a {
    display: none;
 }
 
+.section-brayton-academy .content .c-form .form .fields select {
+    color: #19242F;
+    border: none;
+    border-bottom: 1px solid #dd7627;
+    box-shadow: none;
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+
+.section-brayton-academy .content .c-form .form .fields select:focus {
+    outline: none;
+}
+
 .h3-contact-form{
     margin-left: 10px;
     text-transform: uppercase;
