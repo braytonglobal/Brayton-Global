@@ -446,8 +446,9 @@ function addExpand() {
 	document.querySelector('#fp-nav').classList.add('back');
 	document.querySelector('.site-footer').classList.add('back');
 	document.querySelector('.header-top').classList.add('header-back');
-	$.fn.fullpage.setAutoScrolling(false);
+	$.fn.fullpage.setAllowScrolling(false);
 	document.body.style.overflow = 'hidden';
+	document.body.style.height = '100%';
 
 }
 function removeExpand() {
@@ -457,5 +458,5 @@ function removeExpand() {
 	document.querySelector('.site-footer').classList.remove('back');
 	document.querySelector('.header-top').classList.remove('header-back');
 	event.stopPropagation();
-	$.fn.fullpage.setAutoScrolling(true);
+	$.fn.fullpage.setAllowScrolling(true);
 }
