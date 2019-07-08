@@ -295,9 +295,16 @@ a {
     color: #dd7627 !important;
 }
 
-/*what we doç section */
+/*what we do section */
 .section-what-we-do img {
     margin-top: -30px;
+}
+/*candidate section*/
+
+@media screen and (min-width: 510px) {
+    .line {
+       display: none;
+    }
 }
 /*About us section */
 .section-about .c-features li {
