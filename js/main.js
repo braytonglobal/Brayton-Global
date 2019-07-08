@@ -33,7 +33,7 @@ var hideMenu = function(){
 };
 
 $(".page-main").on('click', hideMenu);
-// Smooth scroll <a> links 
+// Smooth scroll <a> links
 var $root = $('html, body');
 $('a.s-scroll').on('click',function() {
     var href = $.attr(this, 'href');
@@ -437,4 +437,26 @@ function send(){
 	document.getElementById('form').action = "mailto:info@braytonglobal.com?subject="
 		+ document.getElementById('subject').value
 		+ "&body=" + document.getElementById("mail-body").value;
+}
+
+//display modal
+function addExpand() {
+	document.querySelector('.modal').classList.add('expand');
+	document.querySelector('.modal-background').classList.add('expand');
+	document.querySelector('#fp-nav').classList.add('back');
+	document.querySelector('.site-footer').classList.add('back');
+	document.querySelector('.header-top').classList.add('header-back');
+	$.fn.fullpage.setAllowScrolling(false);
+	document.body.style.overflow = 'hidden';
+	document.body.style.height = '100%';
+
+}
+function removeExpand() {
+	document.querySelector('.modal').classList.remove('expand');
+	document.querySelector('.modal-background').classList.remove('expand');
+	document.querySelector('#fp-nav').classList.remove('back');
+	document.querySelector('.site-footer').classList.remove('back');
+	document.querySelector('.header-top').classList.remove('header-back');
+	event.stopPropagation();
+	$.fn.fullpage.setAllowScrolling(true);
 }

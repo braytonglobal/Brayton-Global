@@ -424,8 +424,8 @@ strong,
   z-index: 2;
   background: #ffffff;
   height: 200%;
-  padding: 50px;
-  padding-top: 240px;
+  padding: 62px;
+  padding-top: 238px;
   width: 220px;
   padding-right: 0;
   -webkit-transform: rotate(45deg) translateY(-300px);
@@ -438,7 +438,7 @@ strong,
           transition: 0.3s; }
   .page-menu li {
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: 25px;
     -webkit-transform-origin: top left;
         -ms-transform-origin: top left;
             transform-origin: top left;
@@ -455,15 +455,15 @@ strong,
     .page-menu li a {
       color: #1d1d1d;
       font-family: "Roboto Condensed", "League Gothic";
-      vertical-align: middle;
-      display: block;
+      display: flex;
+      align-items: center;
       height: 40px;
       padding-top: 16px;
       padding-bottom: 16px; }
     .page-menu li .icon {
       display: inline-block;
-      width: 40px;
-      height: 40px;
+      width: 37px;
+      height: 37px;
       padding-top: 11px;
       line-height: 1;
       background: #1d1d1d;
@@ -471,7 +471,7 @@ strong,
       border-radius: 2px;
       text-align: center;
       vertical-align: middle;
-      margin-right: 8px;
+      margin-right: 10px;
       position: relative;
       -webkit-transition: 0.3s;
               transition: 0.3s; }
