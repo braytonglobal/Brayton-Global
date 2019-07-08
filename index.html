@@ -59,6 +59,7 @@
     </div>
 </div>
 
+
 <!-- BEGIN OF site header Menu -->
 <header class="header-top">
     <div class="logo-wrapper">
@@ -237,6 +238,8 @@
 
     <!-- Begin of what we do section -->
     <div class="section section-what-we-do" data-section="what-we-do">
+        <div class="modal-background" onclick="removeExpand()"></div>
+
         <section class="content clearfix">
 
             <div class="c-left">
@@ -249,6 +252,30 @@
                 <img src="img/what-we-do.png" alt="what-we-do"/>
             </div>
 
+            <!--modal-->
+            <div class="container">
+                <div class="modal" onclick="addExpand()">
+                    <div class="from">
+                        <div class="from-contents c-header">
+                           <h3 class="subtitle">Not only recruiting but also...</h3>
+                        </div>
+                    </div>
+                    <div class="to">
+                        <div class="to-contents">
+                            <div class="modal-header c-header">
+                                <h2 class="title">Our services</h2>
+                                <div class="x-touch" onclick="removeExpand()">
+                                    <span class="lnr lnr-cross-circle"></span>
+                                </div>
+                            </div>
+                            <div class="modal-content">
+                                <img src="img/services.png" alt="our services"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!--end of modal-->
         </section>
     </div>
     <!-- End of candidates section -->
