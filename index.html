@@ -38,6 +38,7 @@
 
     <!-- Main CSS files -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/custom.css">
     <!-- alt layout -->
     <!--<link rel="stylesheet" href="./css/style-color4.css">-->
 
@@ -64,9 +65,9 @@
         <h2 class="logo dark-bg">
             <span class="title">Brayton Global</span>
             <span class="logo-images">
-					<img class="light-logo" src="img/logo.png" alt="Logo">
-					<img class="dark-logo" src="img/logo.png" alt="Logo">
-				</span>
+                    <img class="light-logo" src="img/logo.png" alt="Logo">
+                    <img class="dark-logo" src="img/logo.png" alt="Logo">
+                </span>
         </h2>
     </div>
     <!-- Begin of menu icon -->
@@ -89,6 +90,12 @@
             <a href="#home">
                 <i class="icon lnr lnr-home"></i>
                 <span class="title">Home</span>
+            </a>
+        </li>
+        <li data-menuanchor="what-we-do">
+            <a href="#what-we-do">
+                <i class="icon lnr lnr-question-circle"></i>
+                <span class="title">What we do</span>
             </a>
         </li>
         <li data-menuanchor="candidates">
@@ -119,12 +126,6 @@
             <a href="#about-us">
                 <i class="icon lnr lnr-flag"></i>
                 <span class="title">About Us</span>
-            </a>
-        </li>
-        <li data-menuanchor="products">
-            <a href="#products">
-                <i class="icon lnr lnr-store"></i>
-                <span class="title">Products</span>
             </a>
         </li>
         <li data-menuanchor="contact">
@@ -172,7 +173,7 @@
     <!--END OF Youtube video bg-->
 
     <!-- Solid color as background -->
-    <!--            <div class="cover-bg pos-abs full-size bg-color" data-bgcolor="#00B4C2"></div>-->
+    <div class="cover-bg pos-abs full-size bg-color" data-bgcolor="#19242F"></div>
 
     <!-- Particles as background -->
     <!--<div  id="particles-js" class="cover-bg pos-abs full-size bg-color" data-bgcolor="rgba(37, 38, 42, 0.81)"></div>-->
@@ -180,7 +181,7 @@
     <!-- Solid color as filter -->
     <!--<div class="cover-bg-mask pos-abs full-size bg-color" data-bgcolor="rgba(33, 40, 82, 0.6)"></div>-->
     <!--<div class="cover-bg-mask pos-abs full-size bg-color" data-bgcolor="#222834"></div>-->
-    <div class="cover-bg-mask pos-abs full-size bg-color" data-bgcolor="rgba(0, 0, 0, 0.56)"></div>
+    <!--<div class="cover-bg-mask pos-abs full-size bg-color" data-bgcolor="rgba(0, 0, 0, 0.56)"></div>-->
 
 </div>
 <!--END OF page cover -->
@@ -190,7 +191,8 @@
 <main class="page-main page-home fullpg" id="mainpage">
 
     <!-- Begin of home section -->
-    <div class="section section-home dark-bg" data-section="home">
+    <div class="section section-home cover-bg-mask" data-section="home">
+        <div class="cover-bg-mask pos-abs full-size bg-color" data-bgcolor="rgba(0, 0, 0, 0.56)"></div>
 
         <!-- Content -->
         <section class="content with-clock anim">
@@ -204,26 +206,27 @@
                             <div class="c-logo home-logo ">
                                 <img class="" src="img/logo.png" alt="Logo">
                             </div>
-                            <header class="header">
-                                <h3>Brayton Global</h3>
+                            <header class="header home-title">
+                                <h2>Brayton </h2>
+                                <h2 class="orange">Global</h2>
                             </header>
-                            <div class="desc">
-                                <p>Fastest growing IT recruitment HUB in Europe</p>
-                            </div>
                         </div>
                     </div>
 
                     <!-- An action button -->
                     <div class="home-btns"
                          style="display: flex;flex-direction: column;align-items: center;justify-content: space-between;">
-                        <a class="btn" href="#" target="_blank">
-                            <span>Jobs</span>
-                        </a>
+                        <div class="desc">
+                            <p class="btn home-subtitle">Fastest growing IT recruitment HUB in Europe</p>
+                        </div>
+                        <!--<a class="btn" href="#" target="_blank">-->
+                            <!--<span>Jobs</span>-->
+                        <!--</a>-->
                         <!--
-                            <a class="btn" href="#products">
-                                <span>Products</span>
-                            </a>
-                        -->
+                        <a class="btn" href="#products">
+                            <span>Products</span>
+                        </a>
+                    -->
                     </div>
 
                 </div>
@@ -231,6 +234,50 @@
         </section>
     </div>
     <!-- End of home section -->
+
+    <!-- Begin of what we do section -->
+    <div class="section section-what-we-do" data-section="what-we-do">
+        <div class="modal-background" onclick="removeExpand()"></div>
+
+        <section class="content clearfix">
+
+            <div class="c-left">
+                <div class="c-wrapper">
+                    <header class="c-header">
+                        <h2>What we do</h2>
+                        <h3 class="subtitle">We care about you</h3>
+                    </header>
+                </div>
+                <img src="img/what-we-do.png" alt="what-we-do"/>
+            </div>
+
+            <!--modal-->
+            <div class="container">
+                <div class="modal" onclick="addExpand()">
+                    <div class="from">
+                        <div class="from-contents c-header">
+                           <h3 class="subtitle">Not only recruiting but also...</h3>
+                        </div>
+                    </div>
+                    <div class="to">
+                        <div class="to-contents">
+                            <div class="modal-header c-header">
+                                <h2 class="title">Our services</h2>
+                                <div class="x-touch" onclick="removeExpand()">
+                                    <span class="lnr lnr-cross-circle"></span>
+                                </div>
+                            </div>
+                            <div class="modal-content">
+                                <img src="img/services.png" alt="our services"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!--end of modal-->
+        </section>
+    </div>
+    <!-- End of candidates section -->
 
     <!-- Begin of candidates section -->
     <div class="section section-candidates" data-section="candidates">
@@ -242,20 +289,20 @@
                         <h2>Candidates</h2>
                     </header>
                 </div>
-                <div class="c-header">
+                <div class="c-header" style="width: 50%">
                     <p>From young graduates in IT to Senior Cyber Security Expert,
-                        Brayton Global offers great opportunities to all types of profile.
-                        Our main criteria’s: Motivation, Excellence and Openness.
+                        Brayton Global offers great opportunities to <b>all types of profile</b>.<br><br>
+                        Our main criteria’s: <b>Motivation, Excellence and Openness</b>.<br><br>
                         When recruiting, we always keep in mind the well-being of our
                         consultant and look for people ready to grow and invest themselves
-                        in our company, our project and our environment.
+                        in our company, our project and our environment.<br><br>
                         If you are looking for an international career and an opportunity to
                         thrive in doing what you love, Brayton Global will find it for you
                         and provide all the assistance you need from point A to point Z: your
-                        dream job. </p>
+                        <b>dream job</b>.
+                    </p>
                 </div>
             </div>
-
         </section>
     </div>
     <!-- End of candidates section -->
@@ -309,11 +356,10 @@
                         <div class="desc customer-description">
                             <p>
                                 Brayton’s large HUB of partners allows it to react quickly and effectively to our
-                                customer’s needs,
-                                to YOUR needs. By selecting candidates through a strict defined process, we are able to
-                                provide the
-                                best consultants available. Thanks to our experience on the field, we can completely
-                                understand your
+                                customer’s needs, to <b>YOUR</b> needs.<br>
+                                By selecting candidates through a strict defined process, we are able to
+                                provide the best consultants available.<br>
+                                Thanks to our experience on the field, we can completely understand your
                                 demands and provide tailored services allowing you to spare time and means.
                             </p>
                         </div>
@@ -325,18 +371,50 @@
                         <h3 class="title">Our Assets</h3>
                         <div class="desc">
                             <ul class="small-list">
-                                <li><p>We communicate quickly and effectively</p></li>
-                                <li><p>We always respect our commitments</p></li>
-                                <li><p>We stay service-oriented</p></li>
-                                <li><p>We keep in mind our priorities: the customer and
-                                    the consultants and believe that a happy consultant
-                                    leads to a satisfied client</p></li>
+                                <li>
+                                    <p>We communicate quickly and effectively</p>
+                                </li>
+                                <li>
+                                    <p>We always respect our commitments</p>
+                                </li>
+                                <li>
+                                    <p>We stay service-oriented</p>
+                                </li>
+                                <li>
+                                    <p>We keep in mind our priorities: the customer and
+                                        the consultants and believe that a happy consultant
+                                        leads to a satisfied client</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- item -->
+                <li class="column anim">
+                    <div class="item-desc">
+
+                    </div>
+                </li>
+                <!-- item -->
+                <li class="column anim">
+                    <div class="item-desc">
+                        <h3 class="title">Benefits to work with us</h3>
+                        <div class="desc">
+                            <ul class="small-list">
+                                <li>
+                                    <p>Receiving positions from the private and public sector</p>
+                                </li>
+                                <li>
+                                    <p>More than 70 openings and several IT profiles</p>
+                                </li>
+                                <li>
+                                    <p>Personal follow up of candidates from point A to point Z</p>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </li>
             </ul>
-
         </section>
     </div>
     <!-- End of customers section -->
@@ -353,7 +431,7 @@
                 </div>
                 <div class="c-header">
                     <p>Through this initiative, Brayton Global provides various
-                        certifications and training in IT Services and Project Management.
+                        certifications and training in IT Services and Project Management.<br>
                         Our offices are located in the heart of the European Quarter in
                         Brussels where our Axelos certified trainers will welcome you with
                         great pleasure and enthusiasm.
@@ -384,7 +462,9 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="c-card left-card anim">
+
                     <div class="card-wrapper">
                         <!-- illustration / pictures -->
                         <div class="c-illustr">
@@ -411,7 +491,7 @@
                         <form class="message form send-message-form" action="#" onsubmit="send()" method="get"
                               enctype="text/plain" id="form">
                             <div class="form-header clearfix">
-                                <h3>Write to us</h3>
+                                <h3 class="h3-contact-form">Write to us</h3>
                                 <div class="btns">
                                     <button class="btn email_b" type="submit" value="Send">Send</button>
                                 </div>
@@ -440,7 +520,7 @@
     </div>
     </section>
     </div>
-    <!-- End of customers section -->
+    <!-- End of Brayton academy section -->
 
     <!-- Begin of about us section -->
     <div class="section section-about section-cent alt-bg-1  fp-auto-height-responsive" data-section="about-us">
@@ -451,237 +531,78 @@
             <div class="c-left">
                 <div class="c-wrapper">
                     <header class="c-header">
-                        <h2>About</h2>
+                        <h2>About Us</h2>
                     </header>
-
-                    <!-- Begin of features/services/offers -->
-                    <ul class="c-features row small-up-1 medium-up-2 large-up-2">
-
-
-                        <!-- item -->
-                        <li class="column anim">
-                            <div class="item-desc">
-                                <h3 class="title">Our Vision</h3>
-                                <div class="desc">
-                                    <p>
-                                        The business value of technology comes
-                                        from and through people Brayton Global
-                                        understands that business value cannot
-                                        be achieved through technology alone.
-                                        It starts with people: experts working
-                                        together to get to the heart of your
-                                        individual business objectives and develop
-                                        the most adapted solutions to fit these
-                                        requirements. We believe this human-centered
-                                        approach to technology is what makes the
-                                        difference for your business.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- item -->
-                        <li class="column anim">
-                            <div class="item-desc">
-                                <h3 class="title">Our Mission</h3>
-                                <div class="desc">
-                                    <p> With you, we create and deliver business
-                                        and technology solutions that fit your needs
-                                        and drive the results you want Brayton Global
-                                        enables you to transform your organization and
-                                        improve performance. We aim to empower you to
-                                        respond more quickly and intuitively to changing
-                                        market dynamics. By bolstering your ability to
-                                        harness the right technology, we help you become
-                                        more agile and competitive.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- item -->
-                        <!--<li class="column anim">
-                            <div class="item-desc">
-                            <h3 class="title">App dev</h3>
-                            <div class="desc">
-                                <p>Lorem ipsum magicum dolor sit amet, consectetur adipiscing elit. Maecenas a sem ultrices neque vehicula fermentum a sit amet nulla.</p>
-                            </div>
-                        </li>-->
-                    </ul>
-                    <!-- End of features/services/offers -->
-                </div>
-            </div>
-
-            <!-- right elements -->
-            <div class="c-right">
-                <div class="c-card anim">
-                    <div class="card-wrapper">
-
-                        <!-- illustration / pictures -->
-                        <!--<div class="c-illustr">-->
-                        <!--<div class="img-wrapper">-->
-                        <!--&lt;!&ndash; slider images &ndash;&gt;-->
-                        <!--<div class="slider-img slides owl-carousel">-->
-                        <!--<div class="slide-item">-->
-                        <!--<img src="img/bg/bg-1.jpg" alt="slide pict">-->
-                        <!--</div>-->
-                        <!--<div class="slide-item">-->
-                        <!--<img src="img/bg/bg-2.jpg" alt="slide pict">-->
-                        <!--</div>-->
-                        <!--<div class="slide-item">-->
-                        <!--<img src="img/bg/bg-3.jpg" alt="slide pict">-->
-                        <!--</div>-->
-                        <!--<div class="slide-item">-->
-                        <!--<img src="img/bg/bg-4.jpg" alt="slide pict">-->
-                        <!--</div>-->
-                        <!--</div>-->
-                        <!--&lt;!&ndash; only one image &ndash;&gt;-->
-                        <!--&lt;!&ndash;<div class="single-img slides">-->
-                        <!--<div class="slide-item">-->
-                        <!--<img src="img/bg-sample1.jpg" alt="slide pict">-->
-                        <!--</div>-->
-                        <!--</div>&ndash;&gt;-->
-                        <!--</div>-->
-                        <!--</div>-->
-                        <!-- card content -->
-                        <div class="c-content text-right">
-                            <h2>Who we are?</h2>
-                            <h3 class="card-h3">The largest recruitment HUB of Europe</h3>
-                            <article class="desc">
-                                <p>
-                                    At <strong>Brayton Global</strong>, we live and breathe
-                                    the philosophy that people matter and results count.
-                                </p>
-                            </article>
-                        </div>
+                    <div class="c-header">
+                        <p>
+                            Our key strategic vision is to
+                            provide premium value services
+                            at affordable prices. Brayton Global
+                            aims to embark customers on a journey
+                            towards digitalization.
+                        </p>
+                        <p>
+                            We deliver excellence through experience
+                            and professionalism, providing our customers
+                            with the best IT talents of Europe.
+                        </p>
                     </div>
+
                 </div>
             </div>
+            <!-- Begin of features/services/offers -->
+            <ul class="c-features row small-up-1 medium-up-2 large-up-2">
+                <li class="column anim">
+                    <div class="item-desc">
+                        <h3 class="title">Our philosophy</h3>
+                    </div>
+                    <div class="desc">
+                        <div class="logo-row">
+                            <div class="logo-description">
+                                <div class="round orange">
+                                    <span class="lnr lnr-briefcase"></span>
+                                </div>
+                                <div class="description-title orange">our mission</div>
+                                <div class="description">create and deliver business</div>
+                                <div class="description">fit for purpose</div>
+                                <div class="description">fit for use</div>
+                            </div>
+                            <div class="logo-description">
+                                <div class="round grey">
+                                    <span class="lnr lnr-flag"></span>
+                                </div>
+                                <div class="description-title grey">our vision</div>
+                                <div class="description">relationship</div>
+                                <div class="description">people, partners</div>
+                                <div class="description">measurable process</div>
+                            </div>
+                            <div class="logo-description">
+                                <div class="round orange">
+                                    <span class="lnr lnr-apartment"></span>
+                                </div>
+                                <div class="description-title orange">our values</div>
+                                <div class="description">quality</div>
+                                <div class="description">transparency</div>
+                                <div class="description">expertise</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <!-- item -->
+                <!--<li class="column anim">
+      <div class="item-desc">
+      <h3 class="title">App dev</h3>
+      <div class="desc">
+          <p>Lorem ipsum magicum dolor sit amet, consectetur adipiscing elit. Maecenas a sem ultrices neque vehicula fermentum a sit amet nulla.</p>
+      </div>
+  </li>-->
+            </ul>
+            <!-- End of features/services/offers -->
+
         </section>
     </div>
     <!-- End of about us section -->
-
-
-    <!-- Begin of Products/gallery section -->
-    <div class="section section-products section-cent alt-bg-2 dark-bg" data-section="products">
-
-        <section class="content clearfix">
-
-            <div class="c-wrapper">
-                <header class="c-header">
-                    <h2>Products</h2>
-                    <p>At <strong>Brayton Global</strong>, we’re committed to providing first-in-class ICT
-                        selection.</p>
-                </header>
-
-                <div class="gallery-slides">
-                    <!-- begin of grid gallery -->
-                    <ul class="c-gallery row small-up-2 medium-up-3 large-up-4">
-                        <!-- item -->
-                        <li class="column anim">
-                            <a href="https://skillmatrix.be" target="_blank">
-                                <div class="item-img">
-                                    <div class="img bg-img" data-image-src="img/bg/bg-1.jpg"></div>
-                                </div>
-                                <div class="item-desc">
-                                    <h3 class="title">Skillmatrix</h3>
-                                    <div class="desc">
-                                        <p>ATS system</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- item -->
-                        <li class="column anim">
-                            <a href="https://prod.vemasys.com/" target="_blank">
-                                <div class="item-img">
-                                    <div class="img bg-img" data-image-src="img/tools/vemasys.png"></div>
-                                </div>
-                                <div class="item-desc">
-                                    <h3 class="title">VeMaSys</h3>
-                                    <div class="desc">
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- item -->
-                        <li class="column anim">
-                            <a href="https://brusselsaquariums.be/" target="_blank">
-                                <div class="item-img">
-                                    <div class="img bg-img" data-image-src="img/tools/nba.jpg"></div>
-                                </div>
-                                <div class="item-desc">
-                                    <h3 class="title">Brussels Aquariums</h3>
-                                    <div class="desc">
-                                        <p>Web shop</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- item -->
-                        <li class="column anim">
-                            <a href="http://vds-consulting.be/fau/" target="_blank">
-                                <div class="item-img">
-                                    <div class="img bg-img" data-image-src="img/tools/fau.png"></div>
-                                </div>
-                                <div class="item-desc">
-                                    <h3 class="title">Find an Umbrella</h3>
-                                    <div class="desc">
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- item -->
-                        <li class="column anim">
-                            <a href="http://mylandlordclub.com/">
-                                <div class="item-img">
-                                    <div class="img bg-img" data-image-src="img/tools/mlc.png"></div>
-                                </div>
-                                <div class="item-desc">
-                                    <h3 class="title">My Landlord Club</h3>
-                                    <div class="desc">
-                                        <p>Real Estate</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- item -->
-                        <li class="column anim">
-                            <a href="http://factorio.vds-consulting.be/" target="_blank">
-                                <div class="item-img">
-                                    <div class="img bg-img" data-image-src="img/tools/factorio.jpg"></div>
-                                </div>
-                                <div class="item-desc">
-                                    <h3 class="title">F@ctorio</h3>
-                                    <div class="desc">
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- item -->
-                        <li class="column anim">
-                            <a href="#contact">
-                                <div class="item-img">
-                                    <div class="img bg-img" data-image-src="img/tools/fusee.jpg"></div>
-                                </div>
-                                <div class="item-desc">
-                                    <h3 class="title">Your Website</h3>
-                                    <div class="desc">
-                                        <p>Here!</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-
-                    </ul>
-                    <!-- end of grid gallery -->
-                </div>
-            </div>
-        </section>
-    </div>
-    <!-- End of Products/gallery section -->
-
 
     <!-- Begin of contact section -->
     <div class="section section-contact section-cent" data-section="contact">
@@ -786,13 +707,13 @@
 
 <!-- Detailed vendor scripts -->
 <!--<script src="./js/vendor/jquery.fullPage.min.js"></script>
-    <script src="./js/vendor/jquery.slimscroll.min.js"></script>
-    <script src="./js/vendor/jquery.knob.min.js"></script>
-    <script src="./js/vegas/vegas.min.js"></script>
-    <script src="./js/vendor/jquery.maximage.js"></script>
-    <script src="./js/vendor/okvideo.min.js"></script>
-    <script src="./js/owl-carousel/owl.carousel.js"></script>
-    <script src="./js/swiper/js/swiper.js"></script>-->
+<script src="./js/vendor/jquery.slimscroll.min.js"></script>
+<script src="./js/vendor/jquery.knob.min.js"></script>
+<script src="./js/vegas/vegas.min.js"></script>
+<script src="./js/vendor/jquery.maximage.js"></script>
+<script src="./js/vendor/okvideo.min.js"></script>
+<script src="./js/owl-carousel/owl.carousel.js"></script>
+<script src="./js/swiper/js/swiper.js"></script>-->
 
 <!-- Countdown script -->
 <script src="js/jquery.downCount.js"></script>
@@ -806,13 +727,13 @@
 
 <!-- Google Analytics: Uncomment and change UA-XXXXX-X to be your site"s ID. -->
 <!--<script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src="//www.google-analytics.com/analytics.js";
-        r.parentNode.insertBefore(e,r)}(window,document,"script","ga"));
-        ga("create","UA-XXXXX-X");ga("send","pageview");
-    </script>-->
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src="//www.google-analytics.com/analytics.js";
+    r.parentNode.insertBefore(e,r)}(window,document,"script","ga"));
+    ga("create","UA-XXXXX-X");ga("send","pageview");
+</script>-->
 </body>
 
 
