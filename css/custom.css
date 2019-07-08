@@ -299,13 +299,7 @@ a {
 .section-what-we-do img {
     margin-top: -30px;
 }
-/*candidate section*/
 
-@media screen and (min-width: 510px) {
-    .line {
-       display: none;
-    }
-}
 /*About us section */
 .section-about .c-features li {
     width: 100%;
