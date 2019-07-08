@@ -59,7 +59,6 @@
     </div>
 </div>
 
-
 <!-- BEGIN OF site header Menu -->
 <header class="header-top">
     <div class="logo-wrapper">
@@ -143,34 +142,34 @@
 <!-- BEGIN OF page cover -->
 <div class="page-cover">
     <!-- Cover Background -->
-    <!--<div class="cover-bg pos-abs full-size bg-img" data-image-src="./img/bg/background.jpg"></div>-->
+    <div class="cover-bg pos-abs full-size bg-img" data-image-src="./img/bg/bg-1.jpg"></div>
 
     <!-- BEGIN OF Slideshow Background -->
-    <!--<div class="cover-bg pos-abs full-size slide-show">-->
-    <!--<i class='img' data-src='./img/bg/bg-1.jpg'></i>-->
-    <!--<i class='img' data-src='./img/bg/bg-2.jpg'></i>-->
-    <!--<i class='img' data-src='./img/bg/bg-3.jpg'></i>-->
-    <!--<i class='img' data-src='./img/bg/bg-4.jpg'></i>-->
-    <!--<i class='img' data-src='./img/bg/bg-5.jpg'></i>-->
-    <!--<i class='img' data-src='./img/bg/bg-6.jpg'></i>-->
-    <!--</div>-->
+    <!--<div class="cover-bg pos-abs full-size slide-show">
+        <i class='img' data-src='./img/bg/bg-1.jpg'></i>
+        <i class='img' data-src='./img/bg/bg-2.jpg'></i>
+        <i class='img' data-src='./img/bg/bg-3.jpg'></i>
+        <i class='img' data-src='./img/bg/bg-4.jpg'></i>
+        <i class='img' data-src='./img/bg/bg-5.jpg'></i>
+        <i class='img' data-src='./img/bg/bg-6.jpg'></i>
+    </div>-->
     <!-- END OF Slideshow Background -->
 
     <!--BEGIN OF Static video bg  - uncomment below to use Video as Background-->
     <!--<div id="container" class="video-container show-for-medium-up">
-        <video autoplay="autoplay" loop="loop" autobuffer="autobuffer" muted="muted"
-               width="640" height="360">
-            <source src="./vid/loop-bg.mp4" type="video/mp4">
-        </video>
-    </div>-->
+            <video autoplay="autoplay" loop="loop" autobuffer="autobuffer" muted="muted"
+                   width="640" height="360">
+                <source src="./vid/loop-bg.mp4" type="video/mp4">
+            </video>
+        </div>-->
     <!--END OF Static video bg-->
 
     <!--BEGIN OF Youtube video bg  - uncomment/comment below to use/or not Youtube Video as Background-->
     <!--<div class='youtube-container video-container show-for-medium-up'>
-        <iframe frameborder="0"
-        src="https://youtube.com/embed/wqeuYB7KMhY?autoplay=1&controls=0&showinfo=0&autohide=1">
-        </iframe>
-    </div>-->
+            <iframe frameborder="0"
+            src="https://youtube.com/embed/wqeuYB7KMhY?autoplay=1&controls=0&showinfo=0&autohide=1">
+            </iframe>
+        </div>-->
     <!--END OF Youtube video bg-->
 
     <!-- Solid color as background -->
@@ -304,8 +303,6 @@
                     </p>
                 </div>
             </div>
-            </ul>
-
         </section>
     </div>
     <!-- End of candidates section -->
@@ -395,7 +392,7 @@
                 <!-- item -->
                 <li class="column anim">
                     <div class="item-desc">
-                       
+
                     </div>
                 </li>
                 <!-- item -->
@@ -434,7 +431,7 @@
                 </div>
                 <div class="c-header">
                     <p>Through this initiative, Brayton Global provides various
-                        certifications and training in IT Services and Project Management.
+                        certifications and training in IT Services and Project Management.<br>
                         Our offices are located in the heart of the European Quarter in
                         Brussels where our Axelos certified trainers will welcome you with
                         great pleasure and enthusiasm.
@@ -488,25 +485,40 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="c-card anim">
-                    <div class="card-wrapper">
-                        <!-- card content -->
-                        <div class="c-content">
-                            <h3 class="card-h3">More information</h3>
-                            <form action="#" onsubmit="send()" method="post" enctype="text/plain" id="form">
-                                <select id="subject">
-                                    <option value="Information request">Information request</option>
-                                    <option value="Quote request">Quote request</option>
-                                </select>
-                                <textarea type="text" name="body" id="mail-body" rows="4"></textarea>
-                                <input class="send-btn" type="submit" value="Send">
-                            </form>
-                        </div>
+                <div class="c-card c-form anim">
+                    <!-- card content -->
+                    <div class="c-content card-wrapper">
+                        <form class="message form send-message-form" action="#" onsubmit="send()" method="get"
+                              enctype="text/plain" id="form">
+                            <div class="form-header clearfix">
+                                <h3 class="h3-contact-form">Write to us</h3>
+                                <div class="btns">
+                                    <button class="btn email_b" type="submit" value="Send">Send</button>
+                                </div>
+                            </div>
+                            <div class="fields clearfix">
+                                <div class="input">
+                                    <label for="subject">Subject </label>
+                                    <select name="subject" id="subject" required aria-required="true" class="valid" aria-invalid="false">
+                                        <option value="Information request">Information request</option>
+                                        <option value="Quote request">Quote request</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="fields clearfix no-border">
+                                <div class="input">
+                                    <label for="mail-body">Message </label>
+                                    <textarea type="text" name="body" id="mail-body" placeholder="..." rows="4"
+                                              required aria-required="true" class="valid"
+                                              aria-invalid="false"></textarea>
+                                    <label id="mail-body-error" class="error valid" for="mail-body"></label>
+                                </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </section>
+    </div>
+    </section>
     </div>
     <!-- End of Brayton academy section -->
 

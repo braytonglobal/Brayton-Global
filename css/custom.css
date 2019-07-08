@@ -76,6 +76,42 @@ a {
     border-top: 1px solid #dd7627;
 }
 
+.section .content .c-card .c-content h3 {
+    color: #dd7627;
+}
+
+.section-brayton-academy .content .c-form .form .form-header button {
+    background: #dd7627;
+}
+
+.section-brayton-academy .content .c-form .form .fields label {
+    color: #dd7627;
+}
+
+.section-brayton-academy .content .c-form .form .form-header h3:before {
+   display: none;
+}
+
+.section-brayton-academy .content .c-form .form .fields select {
+    color: #19242F;
+    border: none;
+    border-bottom: 1px solid #dd7627;
+    box-shadow: none;
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+
+.section-brayton-academy .content .c-form .form .fields select:focus {
+    outline: none;
+}
+
+.h3-contact-form{
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-size: 18px !important;
+    color: #19242F !important;
+}
+
 /*Modal*/
 .back {
     z-index: 0 !important;
@@ -295,6 +331,12 @@ a {
     color: #dd7627 !important;
 }
 
+/*override card style */
+.card-wrapper {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
 /*what we do section */
 .section-what-we-do img {
     margin-top: -30px;
