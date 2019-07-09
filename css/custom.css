@@ -127,6 +127,18 @@ a {
     color: #19242F !important;
 }
 
+.section-brayton-academy .content .c-form .form .form-header button:hover {
+    background: #dd7627;
+}
+
+a:focus, a:hover {
+    color: #dd7627 !important;
+}
+
+.site-footer .contact .socials li a:hover {
+    background: white;
+}
+
 /*Modal*/
 .back {
     z-index: 0 !important;
