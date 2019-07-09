@@ -11,6 +11,13 @@
     background-attachment: fixed;
     z-index: -1;
 }
+.section-contact {
+    background-image: url("../img/bg/last-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
 
 .subtitle {
     text-indent: 30px;
@@ -76,6 +83,14 @@ a {
     border-top: 1px solid #dd7627;
 }
 
+.site-footer .contact .links li a:hover {
+    color: #dd7627;
+}
+
+.site-footer .contact .links li a:after {
+    background: #dd7627;
+}
+
 .section .content .c-card .c-content h3 {
     color: #dd7627;
 }
@@ -110,6 +125,18 @@ a {
     text-transform: uppercase;
     font-size: 18px !important;
     color: #19242F !important;
+}
+
+.section-brayton-academy .content .c-form .form .form-header button:hover {
+    background: #dd7627;
+}
+
+a:focus, a:hover {
+    color: #dd7627 !important;
+}
+
+.site-footer .contact .socials li a:hover {
+    background: white;
 }
 
 /*Modal*/
@@ -346,4 +373,21 @@ a {
 .section-about .c-features li {
     width: 100%;
     padding-right: 0 !important;
+}
+
+.h3-subtitle {
+    text-indent: 70px;
+    text-align: left;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 18px;
+    color: #B4B4BA;
+}
+
+/*Contact section*/
+
+
+.section-contact .row {
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
 }
