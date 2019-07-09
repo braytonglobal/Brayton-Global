@@ -434,7 +434,7 @@ text_message_elem.oninput = function(e) {
 
 //send contact email
 function send(){
-	document.getElementById('form').action = "mailto:info@braytonglobal.com?subject="
+	document.getElementById('form').action = "mailto:contact@braytonglobal.com?subject="
 		+ document.getElementById('subject').value
 		+ "&body=" + document.getElementById("mail-body").value;
 }

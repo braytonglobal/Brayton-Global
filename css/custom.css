@@ -11,6 +11,13 @@
     background-attachment: fixed;
     z-index: -1;
 }
+.section-contact {
+    background-image: url("../img/bg/last-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
 
 .subtitle {
     text-indent: 30px;
@@ -354,4 +361,13 @@ a {
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 18px;
     color: #B4B4BA;
+}
+
+/*Contact section*/
+
+
+.section-contact .row {
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
 }
