@@ -83,6 +83,14 @@ a {
     border-top: 1px solid #dd7627;
 }
 
+.site-footer .contact .links li a:hover {
+    color: #dd7627;
+}
+
+.site-footer .contact .links li a:after {
+    background: #dd7627;
+}
+
 .section .content .c-card .c-content h3 {
     color: #dd7627;
 }
