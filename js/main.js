@@ -462,6 +462,44 @@ function send() {
         + "&body=" + document.getElementById("mail-body").value;
 }
 
+//show column content
+function showAndHide(id) {
+    if(id === "philosophy") {
+        showContent("philosophy");
+        hideContent("team");
+    }
+    else if(id === "team") {
+        showContent("team");
+        hideContent("philosophy");
+    }
+}
+
+function showContent(id) {
+    document.querySelector('#down-'+id).classList.add('invisible');
+    document.querySelector('#down-'+id).classList.remove('visible');
+    // document.querySelector('#up-'+id).classList.add('visible');
+    // document.querySelector('#up-'+id).classList.remove('invisible');
+    document.querySelector('.'+id).classList.add('visible');
+    document.querySelector('.'+id).classList.remove('invisible');
+    setTimeout(function() { document.querySelector('#'+id).classList.remove('invisible-column');
+        document.querySelector('#'+id).classList.add('visible-column');}, 10);
+}
+
+function hideContent(id) {
+    // document.querySelector('#up-'+id).classList.add('invisible');
+    // document.querySelector('#up-'+id).classList.remove('visible');
+    document.querySelector('#down-'+id).classList.add('visible');
+    document.querySelector('#down-'+id).classList.remove('invisible');
+    document.querySelector('#'+id).classList.add('invisible-column');
+    document.querySelector('#'+id).classList.remove('visible-column');
+    // setTimeout((function() {document.querySelector('.'+id).classList.remove('visible');
+    //     document.querySelector('.'+id).classList.add('invisible');}), 1000)
+    document.querySelector('.'+id).classList.remove('visible');
+    document.querySelector('.'+id).classList.add('invisible');
+
+}
+
+
 //change footer background
 function changeFooterBg() {
     if (window.location.hash === '#home' || window.location.hash === '#contact') {

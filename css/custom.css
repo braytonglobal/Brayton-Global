@@ -276,14 +276,22 @@ a:focus, a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 10px;
 }
+
+.logo-row p {
+    margin-top: 30px;
+    color: #B4B4BA;
+}
+
 .logo-description {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 50px;
+    width: 150px;
+    font-family: "Roboto", "Helvetica", sans-serif;
 }
 .logo-description .round {
     font-size: 50px;
@@ -368,6 +376,30 @@ a:focus, a:hover {
 .section-what-we-do img {
     margin-top: -30px;
 }
+.section-what-we-do .orange {
+    color: #dd7627 !important;
+}
+
+/*candidates section */
+.candidates-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.candidates-content p {
+    width: 50%;
+}
+
+.candidates-content img {
+    width: 35%;
+}
+
+@media screen and (max-width: 600px) {
+    .candidates-content img {
+        display: none;
+    }
+}
 
 /*customers section*/
 .section .content .c-features li {
@@ -385,6 +417,34 @@ a:focus, a:hover {
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 18px;
     color: #B4B4BA;
+}
+
+.team-photo {
+    border-radius: 110%;
+    width: 95%;
+}
+
+.visible-column {
+    transform: scaleY(1);
+    transform-origin: 50% 0;
+    transition:transform 1s;
+}
+
+.invisible-column {
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition:transform 1s;
+}
+
+.section.section-about .content .c-features li {
+    margin-bottom: 30px;
+}
+
+#down-philosophy, #down-team {
+    margin-left: 5px;
+    font-size: 20px;
+    color: #dd7627;
+    cursor: pointer;
 }
 
 /*Contact section*/
