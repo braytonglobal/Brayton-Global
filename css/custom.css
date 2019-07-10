@@ -291,6 +291,7 @@ a:focus, a:hover {
     align-items: center;
     margin: 0 50px;
     width: 150px;
+    font-family: "Roboto", "Helvetica", sans-serif;
 }
 .logo-description .round {
     font-size: 50px;
@@ -374,6 +375,30 @@ a:focus, a:hover {
 /*what we do section */
 .section-what-we-do img {
     margin-top: -30px;
+}
+.section-what-we-do .orange {
+    color: #dd7627 !important;
+}
+
+/*candidates section */
+.candidates-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.candidates-content p {
+    width: 50%;
+}
+
+.candidates-content img {
+    width: 35%;
+}
+
+@media screen and (max-width: 600px) {
+    .candidates-content img {
+        display: none;
+    }
 }
 
 /*customers section*/
