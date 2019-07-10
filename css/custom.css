@@ -276,7 +276,7 @@ a:focus, a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 .logo-description {
     display: flex;
@@ -284,6 +284,7 @@ a:focus, a:hover {
     justify-content: center;
     align-items: center;
     margin: 0 50px;
+    width: 150px;
 }
 .logo-description .round {
     font-size: 50px;
@@ -381,6 +382,11 @@ a:focus, a:hover {
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 18px;
     color: #B4B4BA;
+}
+
+.team-photo {
+    border-radius: 110%;
+    width: 95%;
 }
 
 /*Contact section*/
