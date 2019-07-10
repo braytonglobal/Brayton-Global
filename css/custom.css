@@ -278,6 +278,12 @@ a:focus, a:hover {
     justify-content: center;
     margin-top: 10px;
 }
+
+.logo-row p {
+    margin-top: 30px;
+    color: #B4B4BA;
+}
+
 .logo-description {
     display: flex;
     flex-direction: column;
@@ -391,6 +397,29 @@ a:focus, a:hover {
 .team-photo {
     border-radius: 110%;
     width: 95%;
+}
+
+.visible-column {
+    transform: scaleY(1);
+    transform-origin: 50% 0;
+    transition:transform 1s;
+}
+
+.invisible-column {
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition:transform 1s;
+}
+
+.section.section-about .content .c-features li {
+    margin-bottom: 30px;
+}
+
+#down-philosophy, #down-team {
+    margin-left: 5px;
+    font-size: 20px;
+    color: #dd7627;
+    cursor: pointer;
 }
 
 /*Contact section*/
