@@ -424,8 +424,8 @@ strong,
   z-index: 2;
   background: #ffffff;
   height: 200%;
-  padding: 50px;
-  padding-top: 240px;
+  padding: 62px;
+  padding-top: 238px;
   width: 220px;
   padding-right: 0;
   -webkit-transform: rotate(45deg) translateY(-300px);
@@ -438,7 +438,7 @@ strong,
           transition: 0.3s; }
   .page-menu li {
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: 25px;
     -webkit-transform-origin: top left;
         -ms-transform-origin: top left;
             transform-origin: top left;
@@ -455,15 +455,15 @@ strong,
     .page-menu li a {
       color: #1d1d1d;
       font-family: "Roboto Condensed", "League Gothic";
-      vertical-align: middle;
-      display: block;
+      display: flex;
+      align-items: center;
       height: 40px;
       padding-top: 16px;
       padding-bottom: 16px; }
     .page-menu li .icon {
       display: inline-block;
-      width: 40px;
-      height: 40px;
+      width: 37px;
+      height: 37px;
       padding-top: 11px;
       line-height: 1;
       background: #1d1d1d;
@@ -471,7 +471,7 @@ strong,
       border-radius: 2px;
       text-align: center;
       vertical-align: middle;
-      margin-right: 8px;
+      margin-right: 10px;
       position: relative;
       -webkit-transition: 0.3s;
               transition: 0.3s; }
@@ -657,7 +657,7 @@ strong,
   overflow: hidden; }
   .page-cover .cover-bg {
     /*  Page cover background image,color */
-    background: url(../img/bg-default.jpg);
+    background: url(../img/bg/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1002,7 +1002,9 @@ strong,
     z-index: 1;
     text-align: center;
     max-width: 720px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-top: 50px;
+  }
     .section-home .content .c-text .title-desc {
       position: relative;
       overflow: hidden;
@@ -2644,16 +2646,16 @@ strong,
   .section-contact .content .c-right {
     float: right;
     width: 34%; }
-  .section-contact .content .c-form .card-wrapper:after {
+  .section-brayton-academy .content .c-form .card-wrapper:after {
     visibility: hidden; }
-  .section-contact .content .c-form .c-content {
+  .section-brayton-academy .content .c-form .c-content {
     padding: 32px; }
-  .section-contact .content .c-form .form .form-header h3 {
+  .section-brayton-academy .content .c-form .form .form-header h3 {
     float: left;
     width: 50%;
     padding-top: 8px;
     position: relative; }
-    .section-contact .content .c-form .form .form-header h3:before {
+    .section-brayton-academy .content .c-form .form .form-header h3:before {
       position: relative;
       height: 16px;
       width: 16px;
@@ -2664,12 +2666,11 @@ strong,
       margin-right: 8px;
       margin-top: -4px;
       vertical-align: middle; }
-    .section-contact .content .c-form .form .form-header h3:after {
+    .section-brayton-academy .content .c-form .form .form-header h3:after {
       display: none; }
-  .section-contact .content .c-form .form .form-header .btns {
-    width: 50%;
+  .section-brayton-academy .content .c-form .form .form-header .btns {
     float: right; }
-  .section-contact .content .c-form .form .form-header button {
+  .section-brayton-academy .content .c-form .form .form-header button {
     float: right;
     padding-top: 2px;
     padding-right: 14px;
@@ -2686,11 +2687,11 @@ strong,
     text-transform: uppercase;
     -webkit-transition: 0.1s;
             transition: 0.1s; }
-    .section-contact .content .c-form .form .form-header button:hover {
+    .section-brayton-academy .content .c-form .form .form-header button:hover {
       background: #3283d4; }
-  .section-contact .content .c-form .form .fields {
+  .section-brayton-academy .content .c-form .form .fields {
     position: relative; }
-    .section-contact .content .c-form .form .fields label {
+    .section-brayton-academy .content .c-form .form .fields label {
       position: absolute;
       top: 8px;
       left: 0;
@@ -2700,7 +2701,7 @@ strong,
       display: block;
       float: left;
       color: #4394e5; }
-    .section-contact .content .c-form .form .fields label.error {
+    .section-brayton-academy .content .c-form .form .fields label.error {
       position: absolute;
       font-family: "Roboto", "Helvetica", sans-serif;
       color: #ce2c52;
@@ -2711,7 +2712,7 @@ strong,
       text-align: right;
       padding-right: 8px;
       width: auto; }
-    .section-contact .content .c-form .form .fields input {
+    .section-brayton-academy .content .c-form .form .fields input {
       float: right;
       padding-left: 64px;
       font-family: "Roboto", "Helvetica", sans-serif;
@@ -2721,7 +2722,17 @@ strong,
       border-bottom: 1px solid #4394e5;
       box-shadow: none;
       margin-bottom: 0; }
-    .section-contact .content .c-form .form .fields textarea {
+    .section-brayton-academy .content .c-form .form .fields select {
+    float: right;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    color: #1d1d1d;
+    border: none;
+    border-bottom: 1px solid #4394e5;
+    box-shadow: none;
+    margin-bottom: 0;
+    margin-top: 40px;}
+    .section-brayton-academy .content .c-form .form .fields textarea {
       margin-top: 40px;
       font-size: 14px;
       font-family: "Roboto", "Helvetica", sans-serif;
@@ -2732,7 +2743,7 @@ strong,
       margin-bottom: 0;
       height: 100px;
       max-height: 150px; }
-    .section-contact .content .c-form .form .fields p {
+    .section-brayton-academy .content .c-form .form .fields p {
       font-family: "Roboto Condensed", "League Gothic";
       font-size: 14px;
       color: #7a7a7a;
@@ -2870,9 +2881,11 @@ strong,
 
 .section-brayton-academy .c-card {
   width: 205px;
+    height: 294px;
 }
 .section-brayton-academy .card-wrapper {
   padding: 5px !important;
+    height: 100%;
 }
 .card-wrapper:after {
   display: none !important;
@@ -2905,6 +2918,18 @@ strong,
 .section-brayton-academy .cards {
   display: flex;
   flex-wrap: wrap;
+}
+
+.section-brayton-academy .send-btn {
+  background-color: #4394e5;
+  border: none;
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-bottom: 2px;
+}
+
+.section-brayton-academy .send-btn:focus {
+  outline: none;
 }
 
 /* 4. Item detail slides / item.html : #itemdetail-page , .section.page-slides .slide */
