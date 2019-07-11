@@ -237,7 +237,7 @@
 
     <!-- Begin of what we do section -->
     <div class="section section-what-we-do" data-section="what-we-do">
-        <div class="modal-background" onclick="removeExpand()"></div>
+        <div class="modal-background-service" onclick="removeExpand('service')"></div>
 
         <section class="content clearfix">
 
@@ -255,16 +255,16 @@
                         </div>
                         <div class="description-title orange">customer's request</div>
                         <p>We centralize and manage our customer's requests.
-                        We are able to transfger requests to our hub in order to answer
-                        our client's need.</p>
+                            We are able to transfger requests to our hub in order to answer
+                            our client's need.</p>
                     </div>
                     <div class="logo-description">
                         <div class="round grey">
                             <span class="lnr lnr-user"></span>
                         </div>
                         <div class="description-title grey">candidate selection</div>
-                        <p>All the candidates are checked to properly match our clieent's requirement.
-                        Through our knowledge and relationship with the client wa increase our chances of placement.
+                        <p>All the candidates are checked to properly match our client's requirement.
+                            Through our knowledge and relationship with the client wa increase our chances of placement.
                         </p>
                     </div>
                     <div class="logo-description">
@@ -280,14 +280,14 @@
                         </div>
                         <div class="description-title orange">continuous improvement</div>
                         <p>Each consultant has a personal follow up to flourish in his career. We offer trainings,
-                        help them find accomodation...</p>
+                            help them find accomodation...</p>
                     </div>
                 </div>
             </div>
 
             <!--modal-->
             <div class="container">
-                <div class="modal" onclick="addExpand()">
+                <div class="modal-service" onclick="addExpand('service')">
                     <div class="from">
                         <div class="from-contents c-header">
                             <h3 class="subtitle orange-text"><span class="lnr lnr-cart"></span> Others services</h3>
@@ -297,7 +297,7 @@
                         <div class="to-contents">
                             <div class="modal-header c-header">
                                 <h2 class="title">Our services</h2>
-                                <div class="x-touch" onclick="removeExpand()">
+                                <div class="x-touch" onclick="removeExpand('service')">
                                     <span class="lnr lnr-cross-circle"></span>
                                 </div>
                             </div>
@@ -360,7 +360,8 @@
                 <p>
                     As a <b>customer</b>, if you are looking for candidates across the world,
                     we are able to move them up from Brussels to Berlin or from Sydney to New York.<br>
-                    As a <b>talent</b>, if you’re looking for a position over the road or across the globe, get in touch…
+                    As a <b>talent</b>, if you’re looking for a position over the road or across the globe, get in
+                    touch…
                 </p>
             </div>
 
@@ -454,107 +455,128 @@
 
     <!-- Begin of brayton academy section -->
     <div class="section section-brayton-academy" data-section="brayton-academy">
+        <div class="modal-background-academy" onclick="removeExpand('academy')"></div>
+
         <section class="content clearfix">
 
-            <div class="c-left">
-                <div class="c-wrapper">
-                    <header class="c-header">
-                        <h2>Brayton Academy</h2>
-                    </header>
-                </div>
-                <div class="c-header">
-                    <p>Through this initiative, Brayton Global provides various
-                        certifications and training in IT Services and Project Management.<br>
-                        Our offices are located in the heart of the European Quarter in
-                        Brussels where our Axelos certified trainers will welcome you with
-                        great pleasure and enthusiasm.
-                    </p>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="c-card left-card anim">
-                    <div class="card-wrapper">
-                        <!-- illustration / pictures -->
-                        <div class="c-illustr">
-                            <div class="img-wrapper">
-                                <img src="img/academy/itil.png" alt="itil">
-                            </div>
+            <div class="c-wrapper">
+                <header class="c-header">
+                    <h2>Brayton Academy</h2>
+                </header>
+                <!--modal-->
+                <div class="container c-header">
+                    <div class="modal-academy" onclick="addExpand('academy')">
+                        <div class="from">
+                            <h3 class="subtitle orange-text"><span class="lnr lnr-envelope"></span> Write to us</h3>
                         </div>
-                        <!-- card content -->
-                        <div class="c-content">
-                            <h3 class="card-h3">Gestion des services ITIL</h3>
-                            <div class="desc">
-                                <div class="content-detail">
-                                    <p class="itil-detail custom-tooltip">Foundation V4
-                                        <span class="tooltiptext"><span class="main-text"> 2 jours 800€ HT </span> <span
-                                                class="subtext"> Certification incluse </span></span>
-                                    </p>
-                                    <p class="itil-detail custom-tooltip">Foundation V3
-                                        <span class="tooltiptext"><span class="main-text"> 3 jours 700€ HT </span> <span
-                                                class="subtext"> Certification incluse </span></span>
-                                    </p>
-                                    <p class="itil-detail">ITIL for Manager</p>
-                                    <p class="itil-detail">ITIL Lifecycle</p>
-                                    <p class="itil-detail">ITIL Capabilities</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="c-card left-card anim">
-
-                    <div class="card-wrapper">
-                        <!-- illustration / pictures -->
-                        <div class="c-illustr">
-                            <div class="img-wrapper">
-                                <img src="img/academy/prince.png" alt="prince2">
-                            </div>
-                        </div>
-                        <!-- card content -->
-                        <div class="c-content">
-                            <h3 class="card-h3">Gestion de projet</h3>
-                            <div class="desc">
-                                <div class="content-detail">
-                                    <p>Prince 2 (Foundation and Practioner)</p>
-                                    <p>Agile/Scrum/Devops (all level) </p>
-                                    <p>PMI</p>
+                        <div class="to">
+                            <div class="to-contents">
+                                <div class="c-card c-form anim">
+                                    <!-- card content -->
+                                    <div class="c-content card-wrapper">
+                                        <form class="message form send-message-form" action="#" onsubmit="send()"
+                                              method="get"
+                                              enctype="text/plain" id="form">
+                                            <div class="form-header clearfix">
+                                                <h3 class="h3-contact-form">Write to us</h3>
+                                                <div class="btns">
+                                                    <button class="btn email_b" type="submit" value="Send">Send</button>
+                                                </div>
+                                            </div>
+                                            <div class="fields clearfix">
+                                                <div class="input">
+                                                    <label for="subject">Subject </label>
+                                                    <select name="subject" id="subject" required aria-required="true"
+                                                            class="valid"
+                                                            aria-invalid="false">
+                                                        <option value="Information request">Information request</option>
+                                                        <option value="Quote request">Quote request</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="fields clearfix no-border">
+                                                <div class="input">
+                                                    <label for="mail-body">Message </label>
+                                                    <textarea type="text" name="body" id="mail-body" placeholder="..."
+                                                              rows="4"
+                                                              required aria-required="true" class="valid"
+                                                              aria-invalid="false"></textarea>
+                                                    <label id="mail-body-error" class="error valid"
+                                                           for="mail-body"></label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="c-card c-form anim">
-                    <!-- card content -->
-                    <div class="c-content card-wrapper">
-                        <form class="message form send-message-form" action="#" onsubmit="send()" method="get"
-                              enctype="text/plain" id="form">
-                            <div class="form-header clearfix">
-                                <h3 class="h3-contact-form">Write to us</h3>
-                                <div class="btns">
-                                    <button class="btn email_b" type="submit" value="Send">Send</button>
+                <div class="c-left">
+                    <div class="c-header">
+                        <p>Through this initiative, Brayton Global provides various
+                            certifications and training in IT Services and Project Management.<br>
+                            Our offices are located in the heart of the European Quarter in
+                            Brussels where our Axelos certified trainers will welcome you with
+                            great pleasure and enthusiasm.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cards">
+                    <div class="c-card left-card anim">
+                        <div class="card-wrapper">
+                            <!-- illustration / pictures -->
+                            <div class="c-illustr">
+                                <div class="img-wrapper">
+                                    <img src="img/academy/itil.png" alt="itil">
                                 </div>
                             </div>
-                            <div class="fields clearfix">
-                                <div class="input">
-                                    <label for="subject">Subject </label>
-                                    <select name="subject" id="subject" required aria-required="true" class="valid"
-                                            aria-invalid="false">
-                                        <option value="Information request">Information request</option>
-                                        <option value="Quote request">Quote request</option>
-                                    </select>
+                            <!-- card content -->
+                            <div class="c-content">
+                                <h2>Gestion des services ITIL</h2>
+                                <div class="desc">
+                                    <div class="content-detail">
+                                        <p class="itil-detail custom-tooltip">Foundation V4
+                                            <span class="tooltiptext"><span
+                                                    class="main-text"> 2 jours 800€ HT </span> <span
+                                                    class="subtext"> Certification incluse </span></span>
+                                        </p>
+                                        <p class="itil-detail custom-tooltip">Foundation V3
+                                            <span class="tooltiptext"><span
+                                                    class="main-text"> 3 jours 700€ HT </span> <span
+                                                    class="subtext"> Certification incluse </span></span>
+                                        </p>
+                                        <p class="itil-detail">ITIL for Manager</p>
+                                        <p class="itil-detail">ITIL Lifecycle</p>
+                                        <p class="itil-detail">ITIL Capabilities</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="fields clearfix no-border">
-                                <div class="input">
-                                    <label for="mail-body">Message </label>
-                                    <textarea type="text" name="body" id="mail-body" placeholder="..." rows="4"
-                                              required aria-required="true" class="valid"
-                                              aria-invalid="false"></textarea>
-                                    <label id="mail-body-error" class="error valid" for="mail-body"></label>
+                        </div>
+                    </div>
+
+                    <div class="c-card left-card anim">
+
+                        <div class="card-wrapper">
+                            <!-- illustration / pictures -->
+                            <div class="c-illustr">
+                                <div class="img-wrapper">
+                                    <img src="img/academy/prince.png" alt="prince2">
                                 </div>
                             </div>
-                        </form>
+                            <!-- card content -->
+                            <div class="c-content">
+                                <h2>Gestion de projet</h2>
+                                <div class="desc">
+                                    <div class="content-detail">
+                                        <p>Prince 2 (Foundation and Practioner)</p>
+                                        <p>Agile/Scrum/Devops (all level) </p>
+                                        <p>PMI</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -649,21 +671,24 @@
                             </div>
                             <div class="logo-description">
                                 <div class="round grey">
-                                    <img class="team-photo" src="img/photos/Pedro%20Ribeiro%20Partner%20Exceutive%20Director.png"/>
+                                    <img class="team-photo"
+                                         src="img/photos/Pedro%20Ribeiro%20Partner%20Exceutive%20Director.png"/>
                                 </div>
                                 <div class="description-title grey">pedro rebeiro</div>
                                 <div class="description">partner, executive director</div>
                             </div>
                             <div class="logo-description">
                                 <div class="round orange">
-                                    <img class="team-photo" src="img/photos/Antonela%20Santilli%20Operation%20Manager.png"/>
+                                    <img class="team-photo"
+                                         src="img/photos/Antonela%20Santilli%20Operation%20Manager.png"/>
                                 </div>
                                 <div class="description-title orange">antonela santilli</div>
                                 <div class="description">operation manager</div>
                             </div>
                             <div class="logo-description">
                                 <div class="round grey">
-                                    <img class="team-photo" src="img/photos/Nahed%20El%20Khamkhami%20IT%20recruiter.png"/>
+                                    <img class="team-photo"
+                                         src="img/photos/Nahed%20El%20Khamkhami%20IT%20recruiter.png"/>
                                 </div>
                                 <div class="description-title grey">nahed el khamkhami</div>
                                 <div class="description">it recruiter</div>
@@ -691,7 +716,8 @@
                             </div>
                             <div class="logo-description">
                                 <div class="round grey">
-                                    <img class="team-photo" src="img/photos/Marc%20Philibert%20Account%20Manager%20IT%20trainer.png"/>
+                                    <img class="team-photo"
+                                         src="img/photos/Marc%20Philibert%20Account%20Manager%20IT%20trainer.png"/>
                                 </div>
                                 <div class="description-title grey">marc philibert</div>
                                 <div class="description">account manager, trainer</div>

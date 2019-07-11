@@ -432,9 +432,9 @@ function send() {
 }
 
 //display modal
-function addExpand() {
-    document.querySelector('.modal').classList.add('expand');
-    document.querySelector('.modal-background').classList.add('expand');
+function addExpand(name) {
+    document.querySelector('.modal-'+name).classList.add('expand');
+    document.querySelector('.modal-background-'+name).classList.add('expand');
     document.querySelector('#fp-nav').classList.add('back');
     document.querySelector('.site-footer').classList.add('back');
     document.querySelector('.header-top').classList.add('header-back');
@@ -444,9 +444,9 @@ function addExpand() {
 
 }
 
-function removeExpand() {
-    document.querySelector('.modal').classList.remove('expand');
-    document.querySelector('.modal-background').classList.remove('expand');
+function removeExpand(name) {
+    document.querySelector('.modal-'+name).classList.remove('expand');
+    document.querySelector('.modal-background-'+name).classList.remove('expand');
     document.querySelector('#fp-nav').classList.remove('back');
     document.querySelector('.site-footer').classList.remove('back');
     document.querySelector('.header-top').classList.remove('header-back');
