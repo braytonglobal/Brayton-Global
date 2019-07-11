@@ -315,6 +315,7 @@ a:focus, a:hover {
      font-weight: bold;
      font-size: 15px;
      margin-top: 5px;
+    text-align: center;
  }
 
 .logo-description .description-title.orange {
@@ -383,8 +384,36 @@ a:focus, a:hover {
 .section-what-we-do img {
     margin-top: -30px;
 }
-.section-what-we-do .orange {
+.section-what-we-do .orange-text {
     color: #dd7627 !important;
+}
+
+.section-what-we-do .logo-description {
+    width: 40%;
+    margin: 0 30px;
+}
+
+@media screen and (max-width: 250px) {
+    .section-what-we-do .logo-description {
+        width: 100%;
+    }
+}
+
+.section-what-we-do .logo-row {
+    align-items: baseline;
+}
+
+.section-what-we-do .logo-row p {
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.section-what-we-do .logo-description .round {
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
 }
 
 /*candidates section */
