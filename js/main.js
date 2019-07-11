@@ -477,8 +477,6 @@ function showAndHide(id) {
 function showContent(id) {
     document.querySelector('#down-'+id).classList.add('invisible');
     document.querySelector('#down-'+id).classList.remove('visible');
-    // document.querySelector('#up-'+id).classList.add('visible');
-    // document.querySelector('#up-'+id).classList.remove('invisible');
     document.querySelector('.'+id).classList.add('visible');
     document.querySelector('.'+id).classList.remove('invisible');
     setTimeout(function() { document.querySelector('#'+id).classList.remove('invisible-column');
@@ -486,8 +484,6 @@ function showContent(id) {
 }
 
 function hideContent(id) {
-    // document.querySelector('#up-'+id).classList.add('invisible');
-    // document.querySelector('#up-'+id).classList.remove('visible');
     document.querySelector('#down-'+id).classList.add('visible');
     document.querySelector('#down-'+id).classList.remove('invisible');
     document.querySelector('#'+id).classList.add('invisible-column');
