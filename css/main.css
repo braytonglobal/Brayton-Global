@@ -772,9 +772,9 @@ strong,
     overflow: hidden;
     padding: 2px; }
     .section .content .c-card .card-wrapper {
-      background: #ffffff;
+      /*background: #ffffff;*/
       padding: 16px;
-      box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+      /*box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);*/
       position: relative; }
       .section .content .c-card .card-wrapper:after {
         position: absolute;
@@ -794,7 +794,8 @@ strong,
     .section .content .c-card .c-content {
       text-align: left;
       padding: 5px;
-      padding-top: 32px; }
+      /*padding-top: 32px;*/
+    }
       .section .content .c-card .c-content.text-right {
         text-align: right; }
       .section .content .c-card .c-content h2 {
@@ -820,7 +821,7 @@ strong,
           /*margin-top: -4px;*/
           /*vertical-align: middle; }*/
       .section .content .c-card .c-content p {
-        color: #1d1d1d;
+        color: white;
         font-family: "Roboto", "Helvetica", sans-serif;
         font-size: 14px; }
     @media (min-width: 720px) {
@@ -841,7 +842,7 @@ strong,
       content: '';
       width: 100%;
       height: 300px;
-      background: #ffffff;
+      /*background: #ffffff;*/
       display: block;
       position: relative; }
       .section .content .c-illustr .img-wrapper .slides {
@@ -895,7 +896,8 @@ strong,
             transition-delay: 1s;
     -webkit-transition-timing-function: cubic-bezier(0.52, 0.42, 0, 1.01);
             transition-timing-function: cubic-bezier(0.52, 0.42, 0, 1.01);
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); } }
+    /*box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); */
+  } }
 
 /* Section footer with scroll down button / .s-footer */
 .s-footer {
@@ -2676,7 +2678,8 @@ strong,
     padding-right: 14px;
     padding-left: 16px;
     margin: 0;
-    height: 40px;
+    height: 55px;
+    width: 100px;
     font-size: 14px;
     font-family: "Roboto Condensed", "League Gothic";
     letter-spacing: 0.2em;
@@ -2880,8 +2883,13 @@ strong,
 /*3.8 Brayton academy page section / .section-brayton-academy*/
 
 .section-brayton-academy .c-card {
-  width: 205px;
-    height: 294px;
+  width: 40%;
+}
+
+@media screen and (max-width: 620px) {
+  .section-brayton-academy .c-card {
+    width: 100%;
+  }
 }
 .section-brayton-academy .card-wrapper {
   padding: 5px !important;
@@ -2899,7 +2907,7 @@ strong,
   justify-content: center;
 }
 .section-brayton-academy .c-card .img-wrapper>img{
-  height: 100%;
+  object-fit: contain;
 }
 .section-brayton-academy .c-content{
   padding-top: 12px;
@@ -2910,6 +2918,9 @@ strong,
 }
 .content-detail {
   padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 .content-detail>p {
   margin-bottom: 0;

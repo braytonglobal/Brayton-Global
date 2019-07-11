@@ -95,6 +95,14 @@ a {
     color: #dd7627;
 }
 
+.section .content .c-card .c-content h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #B4B4BA;
+    text-transform: none;
+    text-align: center;
+}
+
 .section-brayton-academy .content .c-form .form .form-header button {
     background: #dd7627;
 }
@@ -123,8 +131,12 @@ a {
 .h3-contact-form{
     margin-left: 10px;
     text-transform: uppercase;
-    font-size: 18px !important;
-    color: #19242F !important;
+    font-size: 28px !important;
+    color: white !important;
+}
+
+.to-contents .c-card {
+    width: 100%;
 }
 
 .section-brayton-academy .content .c-form .form .form-header button:hover {
@@ -152,7 +164,7 @@ a:focus, a:hover {
     align-items: center;
     display: flex;
 }
-.modal {
+.modal-service, .modal-academy {
     height: 32px;
     overflow: hidden;
     position: relative;
@@ -163,11 +175,11 @@ a:focus, a:hover {
     box-shadow 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
     border-radius 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
 }
-.modal:not(.expand) {
+.modal-service:not(.expand), .modal-academy:not(.expand) {
     margin-top: 20px;
     cursor: pointer;
 }
-.modal:not(.expand):hover h3{
+.modal-service:not(.expand):hover h3, .modal-academy:not(.expand):hover h3{
     opacity: 1;
 }
 .from {
@@ -207,7 +219,7 @@ a:focus, a:hover {
     cursor: pointer;
 }
 
-.modal-background.expand {
+.modal-background-service.expand, .modal-background-academy.expand{
     width: 100vw;
     height: 100vh;
     background-color: #19242F;
@@ -221,7 +233,7 @@ a:focus, a:hover {
 }
 
 
-.modal.expand {
+.modal-service.expand, .modal-academy.expand {
     height: auto;
     width: 80%;
     position: absolute;
@@ -244,14 +256,19 @@ a:focus, a:hover {
     opacity: 1;
     transition: opacity 200ms 100ms cubic-bezier(0.0, 0.0, 0.2, 1);
     height: 100%;
+    width: 100%;
 }
 .expand .to-contents {
     transform: scale(1);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     height: 100%;
     align-items: center;
+}
+
+.section-what-we-do .expand .to-contents {
+    justify-content: space-around;
+
 }
 
 .expand .modal-header {
@@ -315,6 +332,7 @@ a:focus, a:hover {
      font-weight: bold;
      font-size: 15px;
      margin-top: 5px;
+    text-align: center;
  }
 
 .logo-description .description-title.orange {
@@ -338,7 +356,7 @@ a:focus, a:hover {
 
 .section-home.active.anim .c-text .title-desc .t-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
@@ -349,7 +367,8 @@ a:focus, a:hover {
 }
 
 .section-home .content .c-text .c-logo img {
-    height: 80px;
+    height: 110px;
+    margin-bottom: 10px;
 }
 
 .section-home .home-subtitle:after, .section-home .home-subtitle:before {
@@ -359,11 +378,17 @@ a:focus, a:hover {
 .header.home-title {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 30px;
 }
 
 .header.home-title .orange {
     margin-left: 20px;
     color: #dd7627 !important;
+}
+
+@media screen and (max-width: 640px){
+    .section-home .content .c-text .c-logo {
+        display: none; }
 }
 
 /*override card style */
@@ -376,8 +401,36 @@ a:focus, a:hover {
 .section-what-we-do img {
     margin-top: -30px;
 }
-.section-what-we-do .orange {
+ .orange-text {
     color: #dd7627 !important;
+}
+
+.section-what-we-do .logo-description {
+    width: 40%;
+    margin: 0 30px;
+}
+
+@media screen and (max-width: 250px) {
+    .section-what-we-do .logo-description {
+        width: 100%;
+    }
+}
+
+.section-what-we-do .logo-row {
+    align-items: baseline;
+}
+
+.section-what-we-do .logo-row p {
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.section-what-we-do .logo-description .round {
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
 }
 
 /*candidates section */
@@ -465,7 +518,7 @@ a:focus, a:hover {
     font-family: "Roboto", "Helvetica", sans-serif;
     visibility: hidden;
     width: 120px;
-    background-color: #19242F;
+    background-color: #dd7627;
     color: #B4B4BA;
     text-align: center;
     padding: 5px 0;
@@ -490,6 +543,7 @@ a:focus, a:hover {
 .custom-tooltip .tooltiptext .subtext {
     font-style: italic;
     font-size: 10px;
+    color: white;
 }
 
 /* Tooltip arrow */
@@ -501,7 +555,7 @@ a:focus, a:hover {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #19242F transparent transparent transparent;
+    border-color: #dd7627 transparent transparent transparent;
 }
 
 .custom-tooltip:hover {
