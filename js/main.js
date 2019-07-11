@@ -502,7 +502,7 @@ function hideContent(id) {
 
 //change footer background
 function changeFooterBg() {
-    if (window.location.hash === '#home' || window.location.hash === '#contact') {
+    if (window.location.hash === '#home' || window.location.hash === '#contact' || window.location.hash === "") {
         document.querySelector('.site-footer').style.backgroundColor = 'transparent';
     } else {
         document.querySelector('.site-footer').style.backgroundColor = '#19242F';
