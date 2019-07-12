@@ -432,9 +432,9 @@ function send() {
 }
 
 //display modal
-function addExpand() {
-    document.querySelector('.modal').classList.add('expand');
-    document.querySelector('.modal-background').classList.add('expand');
+function addExpand(name) {
+    document.querySelector('.modal-'+name).classList.add('expand');
+    document.querySelector('.modal-background-'+name).classList.add('expand');
     document.querySelector('#fp-nav').classList.add('back');
     document.querySelector('.site-footer').classList.add('back');
     document.querySelector('.header-top').classList.add('header-back');
@@ -444,9 +444,9 @@ function addExpand() {
 
 }
 
-function removeExpand() {
-    document.querySelector('.modal').classList.remove('expand');
-    document.querySelector('.modal-background').classList.remove('expand');
+function removeExpand(name) {
+    document.querySelector('.modal-'+name).classList.remove('expand');
+    document.querySelector('.modal-background-'+name).classList.remove('expand');
     document.querySelector('#fp-nav').classList.remove('back');
     document.querySelector('.site-footer').classList.remove('back');
     document.querySelector('.header-top').classList.remove('header-back');
@@ -477,8 +477,6 @@ function showAndHide(id) {
 function showContent(id) {
     document.querySelector('#down-'+id).classList.add('invisible');
     document.querySelector('#down-'+id).classList.remove('visible');
-    // document.querySelector('#up-'+id).classList.add('visible');
-    // document.querySelector('#up-'+id).classList.remove('invisible');
     document.querySelector('.'+id).classList.add('visible');
     document.querySelector('.'+id).classList.remove('invisible');
     setTimeout(function() { document.querySelector('#'+id).classList.remove('invisible-column');
@@ -486,8 +484,6 @@ function showContent(id) {
 }
 
 function hideContent(id) {
-    // document.querySelector('#up-'+id).classList.add('invisible');
-    // document.querySelector('#up-'+id).classList.remove('visible');
     document.querySelector('#down-'+id).classList.add('visible');
     document.querySelector('#down-'+id).classList.remove('invisible');
     document.querySelector('#'+id).classList.add('invisible-column');
@@ -502,7 +498,7 @@ function hideContent(id) {
 
 //change footer background
 function changeFooterBg() {
-    if (window.location.hash === '#home' || window.location.hash === '#contact') {
+    if (window.location.hash === '#home' || window.location.hash === '#contact' || window.location.hash === "") {
         document.querySelector('.site-footer').style.backgroundColor = 'transparent';
     } else {
         document.querySelector('.site-footer').style.backgroundColor = '#19242F';
