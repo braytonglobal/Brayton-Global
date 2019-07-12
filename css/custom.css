@@ -294,6 +294,7 @@ a:focus, a:hover {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 10px;
+    align-items: baseline;
 }
 
 .logo-row p {
@@ -345,6 +346,7 @@ a:focus, a:hover {
 .logo-description .description {
     text-transform: uppercase;
     font-size: 12px;
+    text-align: center
 }
 
 /*Home section*/
@@ -414,10 +416,6 @@ a:focus, a:hover {
     .section-what-we-do .logo-description {
         width: 100%;
     }
-}
-
-.section-what-we-do .logo-row {
-    align-items: baseline;
 }
 
 .section-what-we-do .logo-row p {
