@@ -4857,18 +4857,11 @@ strong,
 
 /*# sourceMappingURL=main.css.map */
 
-.item {
-  height: 25em;
-  background: transparent;
-  border-left: 1px solid rgba(0, 0, 0, 0.12);
-  border:1px solid grey;
-  position:relative;
-}
-div .item h3 {
+
+.item h3 {
   /* font-size: larger; */
   font-size:medium;
-  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
-}
+ }
 
 .item p {
   text-align: justify;
@@ -4880,39 +4873,7 @@ div .item h3 {
   font-weight: bold;
   width: 80px;
 }
-.itemGroup:first-of-type {
-  margin: 14px auto;
-  width: 100%;
-  height: 40%;
-  font-size: 1em;
-  padding:1% 0;
-  text-align: center;
-}
-@media only screen and (max-width: 601px) {
-  .itemGroup:first-of-type {
-    width: 80%;
-    min-width: 20em;
-  }
-}
 
-.positionMailto{
-  display:block;
-  width:100px;
-  padding:5px;
-  margin:5px auto;
-  background-color: #0b1014;
-  border-radius: 5px;
-  color:white;
-  position:absolute;
-  bottom:5px;
-  left:0;
-  right:0;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); ;
-  
-}
-.positionMailto:hover{
-  background-color: white;
-  color:#0b1014;
-}
+
 
 /* .page-menu.menu-visible changed left value */

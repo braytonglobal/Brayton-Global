@@ -24,51 +24,62 @@
     ;
 
 }
+
 .positionMailto2:hover {
     background-color: white;
     color: #0b1014;
 }
-
-.textPrimary {
-    color: #dd7735;
-    height: 5em;
+/*itemGroup is slickSlider*/
+.slick-slider{
+    margin: 14px auto;
+    width: 100%;
+    height: 40%;
+    font-size: 1em;
+    padding: 1% 0;
     text-align: center;
 }
 
-.slick-slide {
-    margin: 0 27px;
+@media only screen and (max-width: 601px) {
+    .slick-slider {
+        width: 80%;
+        min-width: 20em;
+    }
 }
-
-/* the parent */
-.slick-list {
-    margin: 0 -10px;
-}
-
-.item tr td:first-of-type {
-    text-align: left;
-}
-
-.item thead,
-.item tbody,
-.item tbody tr {
+.item thead, .item tbody,.item tbody tr{
     background-color: transparent;
-    width: 100%;
 
 }
 
+.item,
+.slick-slide {
+    height: 25em;
+    background: transparent;
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid grey;
+    position: relative;
+
+}
+
+.item tr {
+    background-color: transparent;
+    width:5em;
+    display: inline-block;
+    width:100%;
+}
+
+.item tr td,
 .item tr th {
-   
-    border-bottom: 1px solid orange;
-}
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: transparent;
+    width:9em;
+    overflow: hidden;
+    text-align: left;
 
-
-.item tr td ,.item tr th {
-        max-width: calc(100% - 1px);;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
     
 }
+/*
 .item tr td>span {
     display: inline-block;
     white-space: nowrap;
@@ -76,8 +87,45 @@
     text-overflow: ellipsis;
     max-width: 100%;
 
+}*/
+/*labels*/
+.item tr td:first-of-type {
+    text-align: left;
 }
-.pbtn {
+
+.textPrimary {
+    color: #dd7735;
+    height: 5em;
     text-align: center;
-    margin: 0 auto;
+}
+.slick-slide {
+    margin: 0 27px;
+    width:calc(100%/3);
+}
+
+/* the parent */
+.slick-list {
+    margin: 0 -10px;
+}
+.positionBtn{
+    display:block;
+    width:100px;
+    padding:5px;
+    margin:5px auto;
+    background-color: #dd7735;
+    border-radius: 5px;
+    color:white;
+    bottom:5px;
+    left:0;
+    right:0;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); ;
+    text-decoration: none;
+    
+  }
+  .positionBtn:hover{
+    background-color: white;
+    color:#0b1014;
+  }
+.btnCenter {
+    text-align: center;
 }
