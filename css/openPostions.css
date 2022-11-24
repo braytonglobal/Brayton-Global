@@ -1,26 +1,83 @@
-.itemTable{
-    color:black;
-    background-color:grey;
-    width:100%;
-    height:fit-content;
+.itemTable {
+    color: black;
+    background-color: grey;
+    width: 100%;
+    height: fit-content;
 
 }
-.itemTable td,.itemTable th{
-    text-align:center;
+
+.itemTable td,
+.itemTable th {
+    text-align: center;
     border-left: 2px solid grey;
 }
-.positionMailto2{
-display:block;
-width:100px;
-padding:5px;
-margin:5px auto;
-background-color: #0b1014;
-border-radius: 5px;
-color:white;
-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); ;
+
+.positionMailto2 {
+    display: block;
+    width: 100px;
+    padding: 5px;
+    margin: 5px auto;
+    background-color: #0b1014;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    ;
 
 }
-.positionMailto2:hover{
-background-color: white;
-color:#0b1014;
+.positionMailto2:hover {
+    background-color: white;
+    color: #0b1014;
+}
+
+.textPrimary {
+    color: #dd7735;
+    height: 5em;
+    text-align: center;
+}
+
+.slick-slide {
+    margin: 0 27px;
+}
+
+/* the parent */
+.slick-list {
+    margin: 0 -10px;
+}
+
+.item tr td:first-of-type {
+    text-align: left;
+}
+
+.item thead,
+.item tbody,
+.item tbody tr {
+    background-color: transparent;
+    width: 100%;
+
+}
+
+.item tr th {
+   
+    border-bottom: 1px solid orange;
+}
+
+
+.item tr td ,.item tr th {
+        max-width: calc(100% - 1px);;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    
+}
+.item tr td>span {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+
+}
+.pbtn {
+    text-align: center;
+    margin: 0 auto;
 }
