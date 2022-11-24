@@ -4858,14 +4858,16 @@ strong,
 /*# sourceMappingURL=main.css.map */
 
 .item {
-  height: 16em;
+  height: 20em;
   padding: 1em 0;
   background: #dd7627;
   border-left: 1px solid rgba(0, 0, 0, 0.12);
   color: black;
+  position:relative;
 }
 .item h3 {
   /* font-size: larger; */
+  font-size:medium;
   border-bottom: 3px solid rgba(0, 0, 0, 0.1);
 }
 .item p {
@@ -4891,5 +4893,24 @@ strong,
     width: 80%;
     min-width: 20em;
   }
+}
+.positionMailto{
+  display:block;
+  width:100px;
+  padding:5px;
+  margin:5px auto;
+  background-color: #0b1014;
+  border-radius: 5px;
+  color:white;
+  position:absolute;
+  bottom:5px;
+  left:0;
+  right:0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); ;
+  
+}
+.positionMailto:hover{
+  background-color: white;
+  color:#0b1014;
 }
 /* .page-menu.menu-visible changed left value */

@@ -1,0 +1,26 @@
+.itemTable{
+    color:black;
+    background-color:grey;
+    width:100%;
+    height:fit-content;
+
+}
+.itemTable td,.itemTable th{
+    text-align:center;
+    border-left: 2px solid grey;
+}
+.positionMailto2{
+display:block;
+width:100px;
+padding:5px;
+margin:5px auto;
+background-color: #0b1014;
+border-radius: 5px;
+color:white;
+box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); ;
+
+}
+.positionMailto2:hover{
+background-color: white;
+color:#0b1014;
+}
