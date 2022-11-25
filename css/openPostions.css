@@ -109,7 +109,7 @@
 }
 .positionBtn{
     display:block;
-    width:100px;
+    width:99px;
     padding:5px;
     margin:5px auto;
     background-color: #dd7735;
@@ -120,11 +120,15 @@
     right:0;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); ;
     text-decoration: none;
+    transition: transform 0.5s linear;
+    
     
   }
   .positionBtn:hover{
     background-color: white;
-    color:#0b1014;
+    color:#0b1014; 
+    transform:scale(1.1);
+    
   }
 .btnCenter {
     text-align: center;
