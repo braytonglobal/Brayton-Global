@@ -42,25 +42,24 @@ $(document).ready(() => {
           if (i === itemGroup.length - 1) {
             return;
           }
-
+          var important = itemGroup[i].getElementsByTagName('position')[0].getAttribute('hot-job')
+          if( important==="no"){
+            return
+          }
           var position = itemGroup[i].getElementsByTagName('position')[0].innerHTML
 
           // $("<div class='item'><h3>"+position+"</h3></div>").appendTo(".itemGroup:first-of-type")
 
           var reference = itemGroup[i].getElementsByTagName('reference')[0].innerHTML
 
-
           var exists = itemGroup[i].getElementsByTagName('languages').length
           var languages = exists ? itemGroup[i].getElementsByTagName('languages')[0].innerHTML : "/"
-
 
           exists = itemGroup[i].getElementsByTagName('location').length
           var location = exists ? itemGroup[i].getElementsByTagName('location')[0].innerHTML : "/"
 
-
           exists = itemGroup[i].getElementsByTagName('deadline').length
           var deadline = exists ? itemGroup[i].getElementsByTagName('deadline')[0].innerHTML : "/"
-
 
 
           const emailAddress = "cv@braytonglobal.com"
@@ -83,6 +82,10 @@ $(document).ready(() => {
                       <h3>${position}</h3>
                   </th>
               </tr>
+                  <tr>
+                      <td>Important</td>
+                      <td>${important}</td>
+                  </tr>
                   <tr>
                       <td>Reference</td>
                       <td>${reference}</td>
@@ -112,8 +115,10 @@ $(document).ready(() => {
         })
         var footnote = itemGroup[itemGroup.length - 1].getElementsByTagName('footnote')[0].innerHTML
         $('.itemGroup:first-of-type').after("<p>" + footnote + "</p>")
-        $('.itemGroup:first-of-type').after('<a class="positionBtn" href="/openPositions.html">View more</a>')
+        $('.itemGroup:first-of-type').after('<a class="btn" href="/openPositions.html">View more vacancies</a>')
         sliderInit()
+
+
           //start of openPositions.html related js
           var itemTable = itemGroup
     var htmlOk = `
