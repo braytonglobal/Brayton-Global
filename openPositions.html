@@ -51,7 +51,23 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/openPostions.css"/>
+<style>
 
+    .fp-section.fp-table,.fp-slide.fp-table{
+        display: block;
+        /*instead of display table*/
+  
+    }
+    .fp-tableCell,.slimScrollDiv,.fp-scrollable,.section-feed{
+        height: 100% !important;
+        overflow: scroll !important;
+        overflow-x: hidden !important;
+    }
+    #fp-nav{
+    display: none;
+     }
+  
+</style>
     <!-- alt layout -->
     <!--<link rel="stylesheet" href="./css/style-color4.css">-->
 
@@ -98,9 +114,66 @@
     </header>
     <!-- END OF site header Menu-->
 
-
-
-
+ <!-- BEGIN OF menu button page navigation -->
+ <nav class="page-menu">
+    <ul id="qmenu" class="qmenu">
+        <li data-menuanchor="home">
+            <a href="/index.html#home">
+                <i class="icon lnr lnr-home"></i>
+                <span class="title">Home</span>
+            </a>
+        </li>
+        <li data-menuanchor="what-we-do">
+            <a href="/index.html#what-we-do">
+                <i class="icon lnr lnr-question-circle"></i>
+                <span class="title">Our services</span>
+            </a>
+        </li>
+        <li data-menuanchor="candidates">
+            <a href="/index.html#candidates">
+                <i class="icon lnr lnr-users"></i>
+                <span class="title">Candidates</span>
+            </a>
+        </li>
+        <li data-menuanchor="partners">
+            <a href="/index.html#partners">
+                <i class="icon lnr lnr-briefcase"></i>
+                <span class="title">Global presence</span>
+            </a>
+        </li>
+        <li data-menuanchor="customers">
+            <a href="/index.html#customers">
+                <i class="icon lnr lnr-cart"></i>
+                <span class="title">Customers</span>
+            </a>
+        </li>
+        <li data-menuanchor="brayton-academy">
+            <a href="/index.html#brayton-academy">
+                <i class="icon lnr lnr-graduation-hat"></i>
+                <span class="title">Brayton Academy</span>
+            </a>
+        </li>
+        <li data-menuanchor="about-us">
+            <a href="/index.html#about-us">
+                <i class="icon lnr lnr-flag"></i>
+                <span class="title">About Us</span>
+            </a>
+        </li>
+        <li data-menuanchor="contact">
+            <a href="/index.html#contact">
+                <i class="icon lnr lnr-phone"></i>
+                <span class="title">Contact</span>
+            </a>
+        </li>
+        <li data-menuanchor="feed">
+            <a href="/index.html#feed">
+                <i class=" icon lnr lnr-chevron-right-circle"></i>
+                <span class="title">Open Positions</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<!-- END OF menu button page navigation -->
     <!-- BEGIN OF page cover -->
     <div class="page-cover">
         <!-- Cover Background -->
@@ -151,37 +224,24 @@
 
     <!-- BEGIN OF page main content -->
     <main class="page-main page-home fullpg" id="mainpage">
-
-        <div class="section section-feed" data-section="feed">
+        <div class="section section-feed" data-section="vacancies-table">
             <!--<div class="cover-bg-mask pos-abs full-size bg-color" data-bgcolor="rgba(0, 0, 0, 0.56)"></div>-->
-
             <section class="content clearfix">
-
                 <!-- Begin of  left elements -->
                 <div class="c-left">
                     <div class="c-wrapper">
                         <header class="c-header">
                             <h2>Open Positions</h2>
                         </header>
-
-                        <!---- <p>Available positions</p> -->
-                     
-                     
-                       <table class="itemTable " id="positionsTable">
-<div id="test"></div>
-                       </table>
-
-                 
+                        <!---- <p>Published and promoted vacancies table</p> -->
+                        <table class="itemTable " id="positionsTable"><!--rss.js--></table>
                     </div>
                 </div>
                 <!-- End of left elements -->
-
             </section>
-
         </div>
         <!-- End of feed section -->
     </main>
-
     <!-- END OF page main content -->
 
 
@@ -245,9 +305,9 @@
 
     <!-- Javascript main files -->
     <script src="js/main.js"></script>
-
+ 
     <script src="js/rss.js"></script>
-
+   
     <!-- Google Analytics: Uncomment and change UA-XXXXX-X to be your site"s ID. -->
     <!--<script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

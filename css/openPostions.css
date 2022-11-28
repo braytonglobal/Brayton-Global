@@ -1,17 +1,33 @@
+/*Table css (DataTables)*/
+
 .dataTables_wrapper label,
 .dataTables_wrapper .dataTables_length select,
 .dataTables_wrapper .dataTables_filter input {
-    color: white
+    color: white;
 }
-.dataTable {
-    border: 1px solid rgba(255, 255, 255 0.2);
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, 0.12) !important;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    filter: blur(5px);
+
+.dataTable{
+    position:relative;
+    background: inherit !important;
+    overflow:hidden;
     border-radius: 5px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
 }
+.dataTable::before{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    content: '';
+    box-shadow: inset 0 0 2000px 0 rgba(255, 255, 255, 0.2);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    filter: blur(10px);
+    margin:-20px;
+    pointer-events:none;
+}
+
 .dataTable td{
     border-left: none !important;
 }
@@ -24,17 +40,14 @@
 .dataTable tfoot,
 .dataTable tbody {
     background-color: transparent !important;
-    color: white;
-    
+    color: white;   
 }
-
 .itemTable {
 
     color: black;
     background-color: grey;
     width: 100%;
     height: fit-content;
-
 }
 
 .itemTable td,
@@ -52,8 +65,7 @@
     border-radius: 5px;
     color: white;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-    ;
-
+    text-decoration: none;
 }
 
 .positionMailto2:hover {
@@ -61,7 +73,9 @@
     color: #0b1014;
 }
 
-/*itemGroup is slickSlider*/
+
+
+/*slickSlider promotion carousel (.section-feed)*/
 .slick-slider {
     margin: 14px auto;
     width: 100%;
@@ -111,8 +125,6 @@
     width: 9em;
     overflow: hidden;
     text-align: left;
-
-
 }
 
 /*
@@ -157,11 +169,8 @@
     left: 0;
     right: 0;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-    ;
     text-decoration: none;
     transition: 0.5s linear;
-
-
 }
 
 .positionBtn:hover {
@@ -192,5 +201,3 @@ a.btn:hover {
     transform: translate(1.1);
 
 }
-
-/*table css */
