@@ -10,6 +10,7 @@ $(window).on('resize', function () {
 // Show / hide menu
 var menuItems = $('.page-menu');
 var menuIcon = $('.menu-icon');
+/*
 menuIcon.on('click', function () {
     if (menuIcon.hasClass('menu-visible')) {
         menuIcon.removeClass('menu-visible');
@@ -22,7 +23,7 @@ menuIcon.on('click', function () {
         menuItems.addClass('menu-visible');
     }
     setTimeout(hideMenu, 10000);
-});
+});*/
 
 var hideMenu = function () {
     if (menuItems.hasClass('menu-visible')) {

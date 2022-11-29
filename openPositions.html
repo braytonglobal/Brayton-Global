@@ -62,7 +62,32 @@
         height: 100% !important;
         overflow: scroll !important;
         overflow-x: hidden !important;
+       
     }
+    .fp-tableCell{
+        display: block;
+        width:100%;
+
+    }
+.section.section-feed.fp-section{
+    margin:0 !important;
+    top:0 !important;
+    padding-left:0;
+}
+
+.fp-tableCell,.slimScrollDiv,.fp-scrollable,.section-feed{
+    box-sizing:content-box;
+    width:100%;
+    margin:0 auto;
+    padding:0 auto;
+}
+.content.clearfix{
+    padding-top:10px;
+}
+.page-cover{
+    top:0;
+}
+
     #fp-nav{
     display: none;
      }
@@ -71,7 +96,7 @@
     <!-- alt layout -->
     <!--<link rel="stylesheet" href="./css/style-color4.css">-->
 
-    <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    <script src="js/vendor/modernizr-2.7.1.min.js"></script>BB
 
     <!-- Analytics -->
     <script async defer src="https://scripts.withcabin.com/hello.js"></script>
@@ -115,7 +140,7 @@
     <!-- END OF site header Menu-->
 
  <!-- BEGIN OF menu button page navigation -->
- <nav class="page-menu">
+ <nav class="page-menu menu-visible">
     <ul id="qmenu" class="qmenu">
         <li data-menuanchor="home">
             <a href="/index.html#home">
@@ -168,7 +193,7 @@
         <li data-menuanchor="feed">
             <a href="/index.html#feed">
                 <i class=" icon lnr lnr-chevron-right-circle"></i>
-                <span class="title">Open Positions</span>
+                <span class="title">Openings</span>
             </a>
         </li>
     </ul>

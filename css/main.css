@@ -495,13 +495,13 @@ strong,
 /* 1.2 Menu / .page-menu, .header-top .menu-icon */
 .page-menu {
   position: fixed;
-  top: 0;
+  top: -25px;
   left: -300px;
   display: block;
   z-index: 2;
   background: #ffffff;
-  height: 200%;
-  padding: 62px;
+  height: 300%;
+  padding: 50px;
   padding-top: 238px;
   width: 220px;
   padding-right: 0;
@@ -516,7 +516,7 @@ strong,
 }
 .page-menu li {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   -webkit-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
@@ -574,11 +574,12 @@ strong,
 .page-menu.menu-visible {
   visibility: visible;
   opacity: 1;
+
   /* for rss feed to show : */
   left: 282px;
-  -webkit-transform: rotate(45deg) translateY(-300px);
-  -ms-transform: rotate(45deg) translateY(-300px);
-  transform: rotate(45deg) translateY(-300px);
+  -webkit-transform: rotate(45deg) translateY(-282px);
+  -ms-transform: rotate(45deg) translateY(-282px);
+  transform: rotate(45deg) translateY(-282px);
   /*li:nth-child(1){
     	transition-delay: $slide_speed + $delay;
     }
