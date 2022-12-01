@@ -26,7 +26,8 @@
 
 /*Override template colors*/
 a {
-    color: #dd7627; }
+    color: #dd7627; 
+}
 
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
     background: #dd7627;

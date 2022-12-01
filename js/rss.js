@@ -119,12 +119,12 @@ $(document).ready(() => {
         var itemTable = itemGroup
         var htmlOk = `<thead>
           <tr>
+            <th></th>
             <th>Job title</th>
             <th>Reference</th>
             <th>Language(s)</th>
             <th>Location</th>
             <th>Deadline</th>
-            <th>Status</th>
             <th></th>
           </tr>
          </thead>
@@ -138,6 +138,10 @@ $(document).ready(() => {
           var hotjob = position.getAttribute("hot-job");
 
           $("<tr class='itemTr'> </tr>").appendTo(".itemTable:first-of-type #bd")
+
+          var hotJobIcons = hotjob === "published" ? "<td></td>" : "<td>" + "<span class='material-symbols-outlined'>new_releases</span>"+ "</td>"
+          $('.itemTable:first-of-type #bd .itemTr')[i].innerHTML += hotJobIcons
+
           var positionTitle = position.innerHTML
           $('.itemTable:first-of-type #bd .itemTr')[i].innerHTML += "<td>" + positionTitle + "</td>"
 
@@ -155,12 +159,12 @@ $(document).ready(() => {
           exists = itemTable[i].getElementsByTagName('deadline').length
           var deadline = exists ? itemTable[i].getElementsByTagName('deadline')[0].innerHTML : "/"
           $('.itemTable:first-of-type #bd .itemTr')[i].innerHTML += "<td>" + deadline + "</td>"
-          $('.itemTable:first-of-type #bd .itemTr')[i].innerHTML += "<td>" + hotjob + "</td>"
+         
 
           const emailAddress = "cv@braytonglobal.com"
           const mailBody = `Dear Brayton Global,
          %0D%0A
-         %0D%0AI want to submit a candidacy for the position ${position}.
+         %0D%0AI want to submit a candidacy for the position ${positionTitle}.
          %0D%0A
          %0D%0APlease find my resume attached. (Please add your resume)
          %0D%0A
@@ -176,18 +180,31 @@ $(document).ready(() => {
         var footnote = itemTable[itemTable.length - 1].getElementsByTagName('footnote')[0].innerHTML
         $('.itemTable:first-of-type').after("<p>" + footnote + "</p>")
         $("#positionsTable").DataTable({
-          info: false,
+          info: true,
           lengthChange: true,
-          ordering: false,
+          ordering: true,
           "language": {
-            "lengthMenu": "Display Length: _MENU_",
+            "lengthMenu": "_MENU_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
             "paginate": {
               "next": "<span class='lnr lnr-chevron-right'></span>",
               "previous": "<span class='lnr lnr-chevron-left'></span>"
-            }
+            },
+           /* "info":"",*/
+            "searchPlaceholder":"Enter a key word",
+            "search": ""
           },
+          pageLength:5,
+          lengthMenu: [
+            [5, 10, 25, 50, -1],
+            [5 ,15 ,25 ,50 ,100],
+          ],
+          columnDefs: [
+            { orderable: true, targets: 0},
+            { orderable: false, targets: '_all' }
+        ]
 
         })
+        $('.dataTables_wrapper .dataTables_length select option').append(' per page')
       }
     }
   }
