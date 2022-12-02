@@ -201,7 +201,9 @@ $(document).ready(() => {
           columnDefs: [
             { orderable: true, targets: 0},
             { orderable: false, targets: '_all' }
-        ]
+        ],
+        scrollY: '450px',
+        scrollCollapse: true,
 
         })
         $('.dataTables_wrapper .dataTables_length select option').append(' per page')
