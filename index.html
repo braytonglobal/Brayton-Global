@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="fonts/linearicons/stylesheet.css">
     <link rel="stylesheet" href="fonts/ionicons.min.css">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <!-- Vendor CSS style -->
     <link rel="stylesheet" href="css/pageloader.css">
     <link rel="stylesheet" href="css/vendor/all.css">
@@ -50,7 +52,7 @@
     <link rel="stylesheet" href="css/spinner.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/openPostions.css"/>
+    <link rel="stylesheet" href="css/openPositions.css"/>
 
     <!-- alt layout -->
     <!--<link rel="stylesheet" href="./css/style-color4.css">-->
@@ -120,6 +122,12 @@
                     <span class="title">Candidates</span>
                 </a>
             </li>
+            <li data-menuanchor="openings">
+                <a href="#openings">
+                    <i class=" icon lnr lnr-chevron-right-circle"></i>
+                    <span class="title">Openings</span>
+                </a>
+            </li>
             <li data-menuanchor="partners">
                 <a href="#partners">
                     <i class="icon lnr lnr-briefcase"></i>
@@ -148,12 +156,6 @@
                 <a href="#contact">
                     <i class="icon lnr lnr-phone"></i>
                     <span class="title">Contact</span>
-                </a>
-            </li>
-            <li data-menuanchor="feed">
-                <a href="#feed">
-                    <i class=" icon lnr lnr-chevron-right-circle"></i>
-                    <span class="title">Openings</span>
                 </a>
             </li>
         </ul>
@@ -340,28 +342,54 @@
         <div class="section section-candidates" data-section="candidates">
             <section class="content clearfix">
 
+                <!-- Begin of  left elements -->
                 <div class="c-left">
                     <div class="c-wrapper">
                         <header class="c-header">
                             <h2>Candidates</h2>
                         </header>
-                    </div>
-                    <div class="c-header candidates-content">
-                        <p>From young graduates in IT to Senior Cyber Security Expert,
-                            Brayton Global offers great opportunities to <b>all types of profile</b>.<br><br>
-                            If you are looking for an international career and an opportunity to
-                            thrive in doing what you love, Brayton Global will find it for you
-                            and provide all the assistance you need from point A to point Z: your
-                            <b>dream job</b>.<br><br>
-                            <a href="mailto:cv@braytonglobal.com">cv@braytonglobal.com</a>
-                        </p>
-                        <img src="img/candidates.png" />
-                    </div>
+                        From young graduates in IT to Senior Cyber Security Expert,
+                        Brayton Global offers great opportunities to <b>all types of profile</b>.<br><br>
+                        If you are looking for an international career and an opportunity to
+                        thrive in doing what you love, Brayton Global will find it for you
+                        and provide all the assistance you need from point A to point Z: your
+                        <b>dream job</b>.<br><br>
+                        <!---- <p>Available positions</p> -->
 
+                        <div class="itemGroup"></div>
+
+                    </div>
                 </div>
+                <!-- End of left elements -->
+
             </section>
+
         </div>
         <!-- End of candidates section -->
+
+        <!-- Beginning of feed section -->
+        <div class="section section-feed" data-section="openings">
+            <!--<div class="cover-bg-mask pos-abs full-size bg-color" data-bgcolor="rgba(0, 0, 0, 0.56)"></div>-->
+
+            <section class="content clearfix">
+
+                <!-- Begin of  left elements -->
+                <div class="c-left">
+                    <div class="c-wrapper">
+                        <header class="c-header">
+                            <h2>Openings</h2>
+                        </header>
+
+                        <!---- <p>Available positions</p> -->
+                        <table class="itemTable " id="positionsTable"><!--rss.js--></table>
+                    </div>
+                </div>
+                <!-- End of left elements -->
+
+            </section>
+
+        </div>
+        <!-- End of feed section -->
 
         <!-- Begin of partners section -->
         <div class="section section-partners section-cent" data-section="partners">
@@ -726,31 +754,7 @@
 
         </div>
         <!-- End of contact section -->
-        <!-- Beginning of feed section -->
-        <div class="section section-feed" data-section="feed">
-            <!--<div class="cover-bg-mask pos-abs full-size bg-color" data-bgcolor="rgba(0, 0, 0, 0.56)"></div>-->
 
-            <section class="content clearfix">
-
-                <!-- Begin of  left elements -->
-                <div class="c-left">
-                    <div class="c-wrapper">
-                        <header class="c-header">
-                            <h2>Open Positions</h2>
-                        </header>
-
-                        <!---- <p>Available positions</p> -->
-                     
-                      <div class="itemGroup"></div>
-
-                    </div>
-                </div>
-                <!-- End of left elements -->
-
-            </section>
-
-        </div>
-        <!-- End of feed section -->
     </main>
 
     <!-- END OF page main content -->
@@ -785,7 +789,7 @@
      <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
 
     <!-- All vendor scripts -->
-    
+
     <script src="js/vendor/jquery.slimscroll.min.js"></script>
     <script src="js/vendor/all.js"></script>
     <script src="js/particlejs/particles.min.js"></script>

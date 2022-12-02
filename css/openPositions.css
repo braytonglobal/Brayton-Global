@@ -14,6 +14,7 @@
     border-radius: 5px;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
 }
+
 .dataTable::before{
     position:absolute;
     top:0;
@@ -41,7 +42,7 @@
 .dataTable tfoot,
 .dataTable tbody {
     background-color: transparent !important;
-    color: white;   
+    color: white;
 }
 .itemTable {
 
@@ -102,12 +103,13 @@
 
 .item,
 .slick-slide {
-    height: 25em;
     background: transparent;
+    position: relative;
+}
+
+.item{
     border-left: 1px solid rgba(0, 0, 0, 0.12);
     border: 1px solid grey;
-    position: relative;
-
 }
 
 .item tr {
@@ -117,8 +119,7 @@
     width: 100%;
 }
 
-.item tr td,
-.item tr th {
+.item tr td{
     display: inline-block;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -126,6 +127,33 @@
     width: 9em;
     overflow: hidden;
     text-align: left;
+}
+.item tr td{
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.item tr td:first-child{
+    width: 7em;
+    text-align: left;
+    padding: 0.1rem 0.1rem;
+}
+.item tr td:last-child{
+    width: 11em;
+    text-align: right;
+}
+
+.item tr th {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: transparent;
+    width: 18em;
+    overflow: hidden;
+    text-align: center;
 }
 
 /*
@@ -144,7 +172,6 @@
 
 .textPrimary {
     color: #dd7735;
-    height: 5em;
     text-align: center;
 }
 

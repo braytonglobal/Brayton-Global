@@ -79,33 +79,25 @@ $(document).ready(() => {
                       <h3>${position}</h3>
                   </th>
               </tr>
-                  <tr>
-                      <td>Important</td>
-                      <td>${important}</td>
-                  </tr>
-                  <tr>
-                      <td>Reference</td>
-                      <td>${reference}</td>
-                  </tr>
-                  <tr>
-                      <td>Position</td>
-                      <td><span>${position}</span></td>
-                  </tr>
-                  <tr>
-                      <td>Languages</td>
-                      <td>${languages}</td>
-                  </tr>
-                  <tr>
-                      <td>Location</td>
-                      <td>${location}</td>
-                  </tr>
-                  <tr>
-                      <td>Deadline</td>
-                      <td>${deadline}</td>
-                  </tr>
-                  <tr>
-                      <td class='btnCenter' colspan='2'>${button}</td>
-                  </tr>
+              <tr>
+                  <td>Reference</td>
+                  <td>${reference}</td>
+              </tr>
+              <tr>
+                  <td>Languages</td>
+                  <td>${languages}</td>
+              </tr>
+              <tr>
+                  <td>Location</td>
+                  <td>${location}</td>
+              </tr>
+              <tr>
+                  <td>Deadline</td>
+                  <td>${deadline}</td>
+              </tr>
+              <tr>
+                  <td class='btnCenter' colspan='2'>${button}</td>
+              </tr>
             
       </table>`;
           $(htmlDisplay).appendTo('.itemGroup:first-of-type');
@@ -139,7 +131,7 @@ $(document).ready(() => {
 
           $("<tr class='itemTr'> </tr>").appendTo(".itemTable:first-of-type #bd")
 
-          var hotJobIcons = hotjob === "published" ? "<td></td>" : "<td>" + "<span class='material-symbols-outlined'>new_releases</span>"+ "</td>"
+          var hotJobIcons = hotjob === "published" ? "<td></td>" : "<td>" + "<div class=\"icon ion-flame \" style='font-size: 1.5em'></div>"+ "</td>"
           $('.itemTable:first-of-type #bd .itemTr')[i].innerHTML += hotJobIcons
 
           var positionTitle = position.innerHTML
@@ -159,7 +151,7 @@ $(document).ready(() => {
           exists = itemTable[i].getElementsByTagName('deadline').length
           var deadline = exists ? itemTable[i].getElementsByTagName('deadline')[0].innerHTML : "/"
           $('.itemTable:first-of-type #bd .itemTr')[i].innerHTML += "<td>" + deadline + "</td>"
-         
+
 
           const emailAddress = "cv@braytonglobal.com"
           const mailBody = `Dear Brayton Global,
@@ -193,17 +185,16 @@ $(document).ready(() => {
             "searchPlaceholder":"Enter a key word",
             "search": ""
           },
-          pageLength:5,
+          pageLength: 5,
           lengthMenu: [
-            [5, 10, 25, 50, -1],
-            [5 ,15 ,25 ,50 ,100],
+            [5],
+            [5],
           ],
           columnDefs: [
-            { orderable: true, targets: 0},
-            { orderable: false, targets: '_all' }
+            { orderable: true, targets: [0, 5]},
+            { orderable: false, targets: '_all' },
         ],
-        scrollY: '450px',
-        scrollCollapse: true,
+        order: [[0, 'desc']],
 
         })
         $('.dataTables_wrapper .dataTables_length select option').append(' per page')
