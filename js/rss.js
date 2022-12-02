@@ -104,7 +104,7 @@ $(document).ready(() => {
         })
         var footnote = itemGroup[itemGroup.length - 1].getElementsByTagName('footnote')[0].innerHTML
         $('.itemGroup:first-of-type').after("<p>" + footnote + "</p>")
-        $('.itemGroup:first-of-type').after('<a class="btn" href="/openPositions.html">View more vacancies</a>')
+        $('.itemGroup:first-of-type').after('<a class="btn" href="#openings">View more openings</a>')
         sliderInit()
 
         //promoted and published jobs table with DataTables plugin see openPositions.html*****************************************************************************************************************
@@ -173,7 +173,7 @@ $(document).ready(() => {
         $('.itemTable:first-of-type').after("<p>" + footnote + "</p>")
         $("#positionsTable").DataTable({
           info: true,
-          lengthChange: true,
+          lengthChange: false,
           ordering: true,
           "language": {
             "lengthMenu": "_MENU_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
@@ -185,10 +185,10 @@ $(document).ready(() => {
             "searchPlaceholder":"Enter a key word",
             "search": ""
           },
-          pageLength: 5,
+          pageLength: 7,
           lengthMenu: [
-            [5],
-            [5],
+            [7],
+            [7],
           ],
           columnDefs: [
             { orderable: true, targets: [0, 5]},
