@@ -1,9 +1,10 @@
 /* spinner */
 .lds-hourglass {
-  display: inline-block;
+  display: block;
   position: relative;
   width: 80px;
   height: 80px;
+  margin:0 auto;
 }
 .lds-hourglass:after {
   content: " ";

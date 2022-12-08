@@ -194,7 +194,7 @@ a.btn:hover {
 .itemTable {
 
     color: black;
-    background-color: grey;
+    background-color: transparent;
     width: 100%;
     height: fit-content;
 }
