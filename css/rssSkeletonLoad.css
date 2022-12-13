@@ -1,0 +1,76 @@
+.skeleton {
+    opacity: 0.7;
+    animation: skeleton-loading 0.5s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 100%);
+    }
+
+}
+
+/******************************************************Candidacies Slider Skeleton*******************************************************************/
+.skeleton-item {
+    height: 250px;
+    border: 1px solid grey;
+    border-radius: 1px;
+}
+
+.skeleton-text {
+    height: 1em;
+    width: 94%;
+    margin: 0 auto;
+    border-radius: 2px;
+    margin-bottom: 5px;
+
+}
+
+h3.skeleton-text {
+    height: 2em;
+    margin: 10px;
+}
+
+.skeleton-data p {
+    display: inline-block;
+    width: 35%;
+    margin-right: 1%;
+}
+
+.skeleton-data p:last-child {
+    display: inline-block;
+    width: 55%;
+}
+
+div.skeleton-text:last-of-type {
+    width: 99px;
+    padding: 5px;
+    margin: 5px auto;
+    border-radius: 5px;
+    background-color: #dd7735;
+    height: 35px;
+
+}
+/**********************************************************Openings DataTables Skeleton***************************************************************** */
+tr th p.skeleton-text,
+tr td p.skeleton-text {
+
+    height: 1em;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    width:80%;
+    padding:0;
+
+}
+tr td:last-child p.skeleton-text{
+    height:2em;
+    border-radius: 5px;
+}
+.skeletonTable{
+    height:500px;
+}
+ 

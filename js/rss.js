@@ -23,9 +23,62 @@ $(document).ready(() => {
       }]
     })
   }
+  /***************************************************************Candidacies Slick Skeleton************************************************** */
+  var sliderSkeleton = ` <div class='skeleton-item'>
+   <h3 class='skeleton skeleton-text'></h3>
+   <div class='skeleton-data'>
+   <p class='skeleton skeleton-text'></p>
+   <p class='skeleton skeleton-text'></p>
+   </div>
+   <div class='skeleton-data'>
+    <p class='skeleton skeleton-text'></p>
+    <p class='skeleton skeleton-text'></p>
+   </div>
+   <div class='skeleton-data'>
+    <p class='skeleton skeleton-text'></p>
+    <p class='skeleton skeleton-text'></p>
+   </div>
+   <div class='skeleton-data'>
+    <p class='skeleton skeleton-text'></p>
+    <p class='skeleton skeleton-text'></p>
+   </div>
+   <div class='skeleton skeleton-text'></div>
+</div>
+</div >`
+  for (let i = 0; i < 9; i++) {
+    $(sliderSkeleton).appendTo('.itemGroup:first-of-type');
+  }
+  sliderInit();
+  /***************************************************************Openings DataTables Skeleton************************************************** */
+  let dataTableSkeleton =`<thead>
+  <tr>
+    <th></th>
+    <th><p class='skeleton skeleton-text'></p></th>
+    <th><p class='skeleton skeleton-text'></p></th>
+    <th><p class='skeleton skeleton-text'></p></th>
+    <th><p class='skeleton skeleton-text'></p></th>
+    <th><p class='skeleton skeleton-text'></p></th>
+    <th></th>
+  </tr>
+ </thead>
+<tbody id="bd"></tbody>`
+$(dataTableSkeleton).appendTo(".itemTable:first-of-type")
+$(".itemTable:first-of-type").addClass('skeleton-table')
+for (let i = 0; i < 9; i++) {
+  $("<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>").appendTo('.itemTable:first-of-type #bd');
+}
+$("<p class='skeleton skeleton-text'></p>").appendTo('.itemTable:first-of-type #bd td');
+var dt = $("#positionsTable").DataTable({
+  info: false,
+  lengthChange: false,
+  ordering: false,
+ pagination:false,
+ filter:false,
+  pageLength: 7, 
+})
+ /* $("<div class='lds-hourglass'></div>").appendTo(".itemGroup:first-of-type")*/
+  /*$("<div class='lds-hourglass'></div>").appendTo(".itemTable:first-of-type")*/
   var request = new XMLHttpRequest();
-  $("<div class='lds-hourglass'></div>").appendTo(".itemGroup:first-of-type")
-  $("<div class='lds-hourglass'></div>").appendTo(".itemTable:first-of-type")
   request.open("GET", "https://localhost:8000/rss/open-positions", true);
   request.responseType = 'document';
   request.overrideMimeType('text/xml');
@@ -42,6 +95,8 @@ $(document).ready(() => {
   request.onload = function () {
     if (request.readyState === request.DONE) {
       if (request.status === 200) {
+        dt.destroy()
+        $(".itemGroup").slick("unslick")
         $(".itemGroup:first-of-type").html('')
         $(".itemTable:first-of-type").html('')
         var xml = request.responseXML;
@@ -64,6 +119,7 @@ $(document).ready(() => {
           //*****************************************promoted jobs carousel with slick plugin*****************************************************************************************************************
           //Start Case there are no openings to promote
           if (promotedList.length) {
+        
             $.each(itemGroup, (i) => {
               if (i === itemGroup.length - 1) {
                 return;
@@ -125,11 +181,13 @@ $(document).ready(() => {
               </tr>
             
       </table>`;
+            
               $(htmlDisplay).appendTo('.itemGroup:first-of-type');
             })
             var footnote = itemGroup[itemGroup.length - 1].getElementsByTagName('footnote')[0].innerHTML
             $('.itemGroup:first-of-type').after("<p>" + footnote + "</p>")
             $(`<p>Last updated on ${updateDate}`).insertBefore('.itemGroup:first-of-type');
+            
             sliderInit()
           } else {
             $("<div class='alert alert-dark' role='alert'>No job opening recommendations .Click on the button below to view published jobs</div>").appendTo(".itemGroup:first-of-type")
@@ -139,7 +197,8 @@ $(document).ready(() => {
 
 
 
-          //promoted and published jobs table with DataTables plugin see openPositions.html*****************************************************************************************************************
+          /************************************promoted and published jobs table with DataTables plugin see openPositions.html*****************************************************************************************************************/
+          
           var itemTable = itemGroup
           var htmlOk = `<thead>
           <tr>
@@ -152,7 +211,8 @@ $(document).ready(() => {
             <th></th>
           </tr>
          </thead>
-        <tbody id="bd"></tbody>`
+        <tbody id="bd">
+        </tbody>`
           $(htmlOk).appendTo(".itemTable:first-of-type")
           $.each(itemTable, (i) => {
             if (i === itemTable.length - 1) {
@@ -218,11 +278,7 @@ $(document).ready(() => {
               "searchPlaceholder": "Enter a key word",
               "search": ""
             },
-            pageLength: 7,
-            lengthMenu: [
-              [7],
-              [7],
-            ],
+            pageLength: 5,
             columnDefs: [
               { orderable: true, targets: [0, 5] },
               { orderable: false, targets: '_all' },
