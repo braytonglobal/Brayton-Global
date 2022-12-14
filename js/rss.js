@@ -5,7 +5,7 @@ $(document).ready(() => {
       autoplaySpeed: 3000,
       accessibility: true,
       draggable: true,
-      // pauseOnDotsHover:true,
+      pauseOnDotsHover:true,
       swipe: true,
       zIndex: 1000,
       mobileFirst: true,
@@ -23,8 +23,12 @@ $(document).ready(() => {
       }]
     })
   }
+  /*_________________________________________________________________________________________________________________________________________________ */
+  /*_____************************************************************START SKELETON LOADER*************************************************** */
+  /*_________________________________________________________________________________________________________________________________________________ */
+  
   /***************************************************************Candidacies Slick Skeleton************************************************** */
-  var sliderSkeleton = ` <div class='skeleton-item'>
+  var sliderSkeleton = `<div class='skeleton-item'>
    <h3 class='skeleton skeleton-text'></h3>
    <div class='skeleton-data'>
    <p class='skeleton skeleton-text'></p>
@@ -64,20 +68,28 @@ $(document).ready(() => {
 <tbody id="bd"></tbody>`
 $(dataTableSkeleton).appendTo(".itemTable:first-of-type")
 $(".itemTable:first-of-type").addClass('skeleton-table')
-for (let i = 0; i < 9; i++) {
+for (let i = 0; i < 5; i++) {
   $("<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>").appendTo('.itemTable:first-of-type #bd');
 }
 $("<p class='skeleton skeleton-text'></p>").appendTo('.itemTable:first-of-type #bd td');
+$('.itemTable:first-of-type #bd td:first-child p').removeClass('skeleton-text').addClass('skeleton-icon');
 var dt = $("#positionsTable").DataTable({
   info: false,
   lengthChange: false,
   ordering: false,
  pagination:false,
  filter:false,
-  pageLength: 7, 
+  pageLength: 5, 
 })
- /* $("<div class='lds-hourglass'></div>").appendTo(".itemGroup:first-of-type")*/
-  /*$("<div class='lds-hourglass'></div>").appendTo(".itemTable:first-of-type")*/
+ /*_________________________________________________________________________________________________________________________________________________ */
+  /*_____***************************************************************END SKELETON LOADER*************************************************** */
+  /*_________________________________________________________________________________________________________________________________________________ */
+  
+
+   /*---------------------------------------------------------------------------------------------------------------------------------------------*/
+  /*-----****************************************************************START XML HTTP REQUEST*************************************************** */
+  /*---------------------------------------------------------------------------------------------------------------------------------------------*/
+
   var request = new XMLHttpRequest();
   request.open("GET", "https://localhost:8000/rss/open-positions", true);
   request.responseType = 'document';
@@ -85,6 +97,8 @@ var dt = $("#positionsTable").DataTable({
 
   //Start Case server down/error
   request.onerror = () => {
+    dt.destroy()
+    $(".itemGroup").slick("unslick")
     $(".itemGroup:first-of-type").html('')
     $(".itemTable:first-of-type").html('')
     $("<div class='alert alert-danger' role='alert'>There was a problem connecting to the server . Please try again later</div>").appendTo(".itemGroup:first-of-type")
@@ -116,7 +130,7 @@ var dt = $("#positionsTable").DataTable({
           })
           //End filter jobs by promoted => promotedList
 
-          //*****************************************promoted jobs carousel with slick plugin*****************************************************************************************************************
+          //*****************************************promoted jobs carousel with slick plugin:CANDIDACIES*****************************************************************************************************************
           //Start Case there are no openings to promote
           if (promotedList.length) {
         
@@ -197,7 +211,7 @@ var dt = $("#positionsTable").DataTable({
 
 
 
-          /************************************promoted and published jobs table with DataTables plugin see openPositions.html*****************************************************************************************************************/
+          /************************************promoted and published jobs table with DataTables plugin:OPENINGS*****************************************************************************************************************/
           
           var itemTable = itemGroup
           var htmlOk = `<thead>
@@ -298,4 +312,7 @@ var dt = $("#positionsTable").DataTable({
   }
 
   request.send(null);
+  /*---------------------------------------------------------------------------------------------------------------------------------------------*/
+  /*-------*****************************************************************END XML HTTP REQUEST*************************************************** */
+  /*---------------------------------------------------------------------------------------------------------------------------------------------*/
 })

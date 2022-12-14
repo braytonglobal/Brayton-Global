@@ -1,4 +1,4 @@
-.skeleton {
+/*.skeleton {
     opacity: 0.7;
     animation: skeleton-loading 0.5s linear infinite alternate;
 }
@@ -12,6 +12,28 @@
         background-color: hsl(200, 20%, 100%);
     }
 
+};*/
+.skeleton {
+    height: 1em;
+    background: linear-gradient(to right,
+            rgba(202, 202, 202,0),
+            rgba(202, 202, 202, 0.4) 50%,
+            rgba(202, 202, 202,0) 80%),
+            rgb(202, 202, 202,0.3);
+    margin: 0 auto;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    width: 94%;
+    background-repeat: repeat-y;
+    background-size: 50px 500px;
+    background-position: 0 0;
+    animation: shine .7s infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 100% 0, 0 0;
+    }
 }
 
 /******************************************************Candidacies Slider Skeleton*******************************************************************/
@@ -19,20 +41,12 @@
     height: 250px;
     border: 1px solid grey;
     border-radius: 1px;
-}
-
-.skeleton-text {
-    height: 1em;
-    width: 94%;
-    margin: 0 auto;
-    border-radius: 2px;
-    margin-bottom: 5px;
-
+    padding-top: 10px;
 }
 
 h3.skeleton-text {
     height: 2em;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 .skeleton-data p {
@@ -51,26 +65,37 @@ div.skeleton-text:last-of-type {
     padding: 5px;
     margin: 5px auto;
     border-radius: 5px;
-    background-color: #dd7735;
     height: 35px;
-
 }
+
 /**********************************************************Openings DataTables Skeleton***************************************************************** */
+.skeleton-table tr th:first-child,
+.skeleton-table tr td:first-child {
+    width: 35px !important;
+}
+.skeleton-table tr th:nth-child(2),
+.skeleton-table tr td:nth-child(2){
+    width: 250px !important;
+}
+
+.skeleton-icon {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+
 tr th p.skeleton-text,
 tr td p.skeleton-text {
 
     height: 1em;
-    border-radius: 2px;
+    border-radius: 4px;
     margin-bottom: 5px;
-    width:80%;
-    padding:0;
+    width: 80%;
+    padding: 0;
 
 }
-tr td:last-child p.skeleton-text{
-    height:2em;
+
+tr td:last-child p.skeleton-text {
+    height: 2em;
     border-radius: 5px;
 }
-.skeletonTable{
-    height:500px;
-}
- 
