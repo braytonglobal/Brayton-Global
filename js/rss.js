@@ -26,7 +26,7 @@ $(document).ready(() => {
   /*_________________________________________________________________________________________________________________________________________________ */
   /*_____************************************************************START SKELETON LOADER*************************************************** */
   /*_________________________________________________________________________________________________________________________________________________ */
-  
+
   /***************************************************************Candidacies Slick Skeleton************************************************** */
   var sliderSkeleton = `<div class='skeleton-item'>
    <h3 class='skeleton skeleton-text'></h3>
@@ -79,12 +79,12 @@ var dt = $("#positionsTable").DataTable({
   ordering: false,
  pagination:false,
  filter:false,
-  pageLength: 5, 
+  pageLength: 5,
 })
  /*_________________________________________________________________________________________________________________________________________________ */
   /*_____***************************************************************END SKELETON LOADER*************************************************** */
   /*_________________________________________________________________________________________________________________________________________________ */
-  
+
 
    /*---------------------------------------------------------------------------------------------------------------------------------------------*/
   /*-----****************************************************************START XML HTTP REQUEST*************************************************** */
@@ -95,20 +95,28 @@ var dt = $("#positionsTable").DataTable({
   request.responseType = 'document';
   request.overrideMimeType('text/xml');
 
-  //Start Case server down/error
-  request.onerror = () => {
+  function errorDisplay(){
+    const message = "You can usually find our open positions here, but there was a problem connecting to the server.<br/> Please try again later"
     dt.destroy()
     $(".itemGroup").slick("unslick")
     $(".itemGroup:first-of-type").html('')
     $(".itemTable:first-of-type").html('')
-    $("<div class='alert alert-danger' role='alert'>There was a problem connecting to the server . Please try again later</div>").appendTo(".itemGroup:first-of-type")
-    $("<div class='alert alert-danger' role='alert'>There was a problem connecting to the server  . Please try again later</div>").appendTo(".itemTable:first-of-type")
+    $("<div class='alert alert-danger fw-bold' role='alert'>" + message + "</div>").appendTo(".itemGroup:first-of-type")
+    $("<div class='alert alert-danger fw-bold' role='alert'>" + message + "</div>").appendTo(".itemTable:first-of-type")
+  }
+
+  //Start Case server down/error
+  request.onerror = () => {
+    errorDisplay()
   };
   //End Case server down/error
 
   request.onload = function () {
     if (request.readyState === request.DONE) {
-      if (request.status === 200) {
+      //Case request error
+      if(request.status >= 400 && request.status < 600) errorDisplay();
+      //Case request OK
+      else if (request.status === 200) {
         dt.destroy()
         $(".itemGroup").slick("unslick")
         $(".itemGroup:first-of-type").html('')
@@ -133,7 +141,7 @@ var dt = $("#positionsTable").DataTable({
           //*****************************************promoted jobs carousel with slick plugin:CANDIDACIES*****************************************************************************************************************
           //Start Case there are no openings to promote
           if (promotedList.length) {
-        
+
             $.each(itemGroup, (i) => {
               if (i === itemGroup.length - 1) {
                 return;
@@ -195,13 +203,13 @@ var dt = $("#positionsTable").DataTable({
               </tr>
             
       </table>`;
-            
+
               $(htmlDisplay).appendTo('.itemGroup:first-of-type');
             })
             var footnote = itemGroup[itemGroup.length - 1].getElementsByTagName('footnote')[0].innerHTML
             $('.itemGroup:first-of-type').after("<p>" + footnote + "</p>")
             $(`<p>Last updated on ${updateDate}`).insertBefore('.itemGroup:first-of-type');
-            
+
             sliderInit()
           } else {
             $("<div class='alert alert-dark' role='alert'>No job opening recommendations .Click on the button below to view published jobs</div>").appendTo(".itemGroup:first-of-type")
@@ -212,7 +220,7 @@ var dt = $("#positionsTable").DataTable({
 
 
           /************************************promoted and published jobs table with DataTables plugin:OPENINGS*****************************************************************************************************************/
-          
+
           var itemTable = itemGroup
           var htmlOk = `<thead>
           <tr>
