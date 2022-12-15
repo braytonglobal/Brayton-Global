@@ -26,13 +26,13 @@
     width: 94%;
     background-repeat: repeat-y;
     background-size: 50px 500px;
-    background-position: 0 0;
+    background-position: -100px 0;
     animation: shine .7s infinite;
 }
 
 @keyframes shine {
     to {
-        background-position: 100% 0, 0 0;
+        background-position: 190% 0, 0 0;
     }
 }
 
