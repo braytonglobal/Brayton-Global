@@ -91,7 +91,7 @@ $(document).ready(() => {
   /*---------------------------------------------------------------------------------------------------------------------------------------------*/
 
   var request = new XMLHttpRequest();
-  request.open("GET", "https://localhost:8000/rss/open-positions", true);
+  request.open("GET", "https://skillmatrix.be/rss/open-positions", true);
   request.responseType = 'document';
   request.overrideMimeType('text/xml');
 
