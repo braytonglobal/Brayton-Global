@@ -119,6 +119,8 @@ $(document).ready(() => {
       else if (request.status === 200) {
         dt.destroy()
         $(".itemGroup").slick("unslick")
+        $(".itemTable:first-of-type").removeClass('skeleton-table')
+        $('.itemGroup:first-of-type').removeClass('skeleton-item')
         $(".itemGroup:first-of-type").html('')
         $(".itemTable:first-of-type").html('')
         var xml = request.responseXML;
@@ -303,6 +305,7 @@ $(document).ready(() => {
               { orderable: false, targets: '_all' },
             ],
             order: [[0, 'desc']],
+            scrollX:true,
 
           })
           /*$('.dataTables_wrapper .dataTables_length select option').append(' per page')*/

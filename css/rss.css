@@ -81,6 +81,7 @@
     text-align: center;
 }
 
+
 /*labels*/
 .item tr td:first-of-type {
     text-align: left;
@@ -154,6 +155,7 @@ a.btn:hover {
 .dataTables_wrapper .dataTables_length select,
 .dataTables_wrapper .dataTables_filter input {
     color: white;
+    
 }
 
 
@@ -163,6 +165,7 @@ a.btn:hover {
     overflow:hidden;
     border-radius: 5px;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+
 }
 
 .dataTable::before{
@@ -183,6 +186,9 @@ a.btn:hover {
 .dataTable td{
     border-left: none !important;
 }
+.dataTable th:last-child,.dataTable td:last-child{
+    width:50px !important;
+}
 .dataTable th{
     border: none !important;
     border-bottom: 3px solid rgba(0, 0, 0, 0.2) !important;
@@ -194,12 +200,15 @@ a.btn:hover {
     background-color: transparent !important;
     color: white;
 }
-.itemTable {
-
+div.dtaTables_scrollHeadInner{
+    width: 100% !important;
+}
+.itemTable.dataTable.no-footer{
     color: black;
     background-color: transparent;
-    width: 100%;
+    width: 100% !important;
     height: fit-content;
+    margin:0;
 }
 
 .itemTable td,
@@ -224,6 +233,10 @@ a.btn:hover {
     background-color: white;
     color: #0b1014;
 }
+
+            
+/*Add scroll option to table in small screens*/
+
 
 
 
