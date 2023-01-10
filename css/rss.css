@@ -208,9 +208,11 @@ div.dtaTables_scrollHeadInner{
     background-color: transparent;
     width: 100% !important;
     height: fit-content;
-    margin:0;
-}
 
+}
+#itemTable{
+    margin-right:0 !important;
+}
 .itemTable td,
 .itemTable th {
     text-align: center;

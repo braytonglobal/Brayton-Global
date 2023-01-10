@@ -312,7 +312,7 @@ $(document).ready(() => {
           $('#positionsTable_wrapper').prepend(`<div class=" float-start fw-bold fst-italic">Last updated on ${updateDate}</div>`);
         } else {
           $("<div class='alert alert-warning' role='alert'>No openings available . Please try another time</div>").appendTo(".itemGroup:first-of-type")
-          $("<div class='alert alert-warning' role='alert'>No openings availables . Please try another time</div>").appendTo(".itemTable:first-of-type")
+          $(".itemTable:first-of-type").replaceWith("<div class='alert alert-warning' role='alert'>No openings available . Please try another time</div>")
         }
         //End case there are (no) items
       }
