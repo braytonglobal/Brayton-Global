@@ -186,13 +186,25 @@ a.btn:hover {
 .dataTable td{
     border-left: none !important;
 }
-.dataTable th:last-child,.dataTable td:last-child{
-    width:50px !important;
-}
 .dataTable th{
     border: none !important;
     border-bottom: 3px solid rgba(0, 0, 0, 0.2) !important;
     text-align: center !important;
+}
+
+.dataTable th:last-child,.dataTable td:last-child{
+    width:100px !important;
+}
+
+.itemTable td,
+.itemTable th {
+    text-align: center;
+    white-space: nowrap;
+    
+}
+/*last midified*/
+.itemTable td:not(:last-child) {
+    border-right: 2px solid rgba(0, 0, 0, 0.2)  !important;
 }
 .dataTable thead,
 .dataTable tfoot,
@@ -213,11 +225,7 @@ div.dtaTables_scrollHeadInner{
 #itemTable{
     margin-right:0 !important;
 }
-.itemTable td,
-.itemTable th {
-    text-align: center;
-    border-left: 2px solid grey;
-}
+
 
 .positionMailto2 {
     display: block;
