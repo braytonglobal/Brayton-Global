@@ -31,6 +31,7 @@ var hideMenu = function () {
     if (menuItems.hasClass('menu-visible')) {
         menuIcon.removeClass('menu-visible');
         menuItems.removeClass('menu-visible');
+        $.fn.fullpage.setAllowScrolling(true);
     }
     return true;
 };

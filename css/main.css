@@ -416,7 +416,7 @@ strong,
   left: auto;
   right: 0;
   height: auto;
-  z-index: 10;
+  z-index: 12;
 }
 .header-top .logo-wrapper {
   position: relative;
@@ -500,7 +500,7 @@ strong,
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 11;
   height: 300%;
   width: 220px;
   padding: 50px;
@@ -552,7 +552,7 @@ strong,
 .menu-icon {
   float: left;
   position: fixed;
-  z-index: 11;
+  z-index: 12;
   top: 0px;
   padding: 40px;
   left: 0px;
@@ -564,7 +564,7 @@ strong,
 }
 .menu-icon:before {
   position: absolute;
-  z-index: 1;
+  z-index: 12;
   content: "";
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -578,7 +578,7 @@ strong,
   height: 32px;
   float: right;
   position: absolute;
-  z-index: 2;
+  z-index: 12;
 }
 .menu-icon .bars .bar1,
 .menu-icon .bars .bar2,
