@@ -26,7 +26,7 @@
 
 /*Override template colors*/
 a {
-    color: #dd7627; 
+    color: #dd7627;
 }
 
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
@@ -409,7 +409,7 @@ a:focus, a:hover {
 }
 
 .section-what-we-do .logo-description {
-    width: 40%;
+    width: 20%;
     margin: 0 30px;
 }
 
