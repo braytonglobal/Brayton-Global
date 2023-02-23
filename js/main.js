@@ -12,17 +12,19 @@ var menuItems = $('.page-menu');
 var menuIcon = $('.menu-icon');
 
 menuIcon.on('click', function () {
-    if (menuIcon.hasClass('menu-visible')) {
-        menuIcon.removeClass('menu-visible');
-    } else {
-        menuIcon.addClass('menu-visible');
-    }
+    // if (menuIcon.hasClass('menu-visible')) {
+    //     menuIcon.removeClass('menu-visible');
+    // } else {
+    //     menuIcon.addClass('menu-visible');
+    // }
     if (menuItems.hasClass('menu-visible')) {
         menuItems.removeClass('menu-visible');
+        $.fn.fullpage.setAllowScrolling(true);
     } else {
         menuItems.addClass('menu-visible');
+        $.fn.fullpage.setAllowScrolling(false);
     }
-    setTimeout(hideMenu, 10000);
+    //setTimeout(hideMenu, 10000);
 });
 
 var hideMenu = function () {
@@ -33,7 +35,7 @@ var hideMenu = function () {
     return true;
 };
 
-$(".page-main").on('click', hideMenu);
+$(".menu-item").on('click', hideMenu);
 // Smooth scroll <a> links
 var $root = $('html, body');
 $('a.s-scroll').on('click', function () {
