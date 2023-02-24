@@ -492,7 +492,7 @@ a:focus, a:hover {
     margin-bottom: 30px;
 }
 
-#down-philosophy, #down-team {
+.down-philosophy, #down-team {
     margin-left: 5px;
     font-size: 20px;
     color: #dd7627;
