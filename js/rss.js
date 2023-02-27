@@ -216,7 +216,7 @@ $(document).ready(() => {
           } else {
             $("<div class='alert alert-dark' role='alert'>No job opening recommendations .Click on the button below to view published jobs</div>").appendTo(".itemGroup:first-of-type")
           }
-          $('.itemGroup:first-of-type').after('<a class="positionBtn" style="background-color:#0b1014;width:200px;text-align:center" href="#openings">View full openings list</a>')
+          // $('.itemGroup:first-of-type').after('<a class="positionBtn" style="background-color:#0b1014;width:200px;text-align:center" href="#openings">View full openings list</a>')
           //End Case there are no oepnings to promote
 
           /************************************promoted and published jobs table with DataTables plugin:OPENINGS*****************************************************************************************************************/

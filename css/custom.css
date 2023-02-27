@@ -165,8 +165,8 @@ a:focus, a:hover {
     align-items: center;
     display: flex;
 }
-.modal-service, .modal-academy {
-    height: 32px;
+.modal-service, .modal-academy, .modal-positions {
+    height: 50px;
     overflow: hidden;
     position: relative;
     width: 350px;
@@ -176,7 +176,7 @@ a:focus, a:hover {
     box-shadow 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
     border-radius 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
 }
-.modal-service:not(.expand), .modal-academy:not(.expand) {
+.modal-service:not(.expand), .modal-academy:not(.expand), .modal-positions:not(.expand) {
     margin-top: 20px;
     cursor: pointer;
 }
@@ -220,7 +220,7 @@ a:focus, a:hover {
     cursor: pointer;
 }
 
-.modal-background-service.expand, .modal-background-academy.expand{
+.modal-background-service.expand, .modal-background-academy.expand, .modal-background-positions.expand{
     width: 100vw;
     height: 100vh;
     background-color: #19242F;
@@ -234,9 +234,9 @@ a:focus, a:hover {
 }
 
 
-.modal-service.expand, .modal-academy.expand {
-    height: auto;
-    width: 80%;
+.modal-service.expand, .modal-academy.expand, .modal-positions.expand {
+    height: 120%;
+    width: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
