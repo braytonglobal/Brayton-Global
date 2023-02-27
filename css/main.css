@@ -4771,7 +4771,6 @@ strong,
 }
 
 .logos-img {
-  filter: grayscale(100%);
   display: block;
   max-width:180px;
   max-height:100px;
