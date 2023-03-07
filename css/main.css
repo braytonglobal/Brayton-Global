@@ -3599,6 +3599,7 @@ strong,
 .section-brayton-academy .cards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .section-brayton-academy .send-btn {
@@ -4781,5 +4782,158 @@ strong,
   height: auto;
 }
 
+/** SERVICES TABLE **/
+.services_tabs {
+  position: relative;
+  min-height: 462px; /* Find another solution. This height must be changed each time the length of the list will be changed. */
+  clear: both;
+}
+
+@media (max-width: 601px) {
+  .services_tabs {
+    min-height: 1400px; /* Find another solution. This height must be changed each time the length of the list will be changed. */
+  }
+}
+
+
+.service_tab {
+  float: left;
+  clear: both;
+  box-shadow: 0 0 15px black;
+}
+
+.service_tab label {
+  color: #B4B4BA;
+  font-family: "Roboto", "Helvetica", sans-serif;
+  padding: 9px;
+  border: 1px solid #ccc;
+  margin-left: -1px;
+  font-size: 21px;
+  vertical-align: middle;
+  position: relative;
+  left: 1px;
+  width: 264px;
+  height: 50px;
+  display: table-cell;
+}
+.service_tab [type=radio] {
+  display: none;
+}
+
+.service_content {
+  color: #ffffff;
+  font-family: "Roboto", "Helvetica", sans-serif;
+  font-size: 14px;
+  position: absolute;
+  top: 461px;
+  right: 0;
+  bottom: 0;
+  background-color: #21333f;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+@media (min-width: 602px) {
+  .service_content {
+    color: #ffffff;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 265px;
+    background: #21333f;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-left: 0;
+  }
+
+  [type=radio]:checked ~ label {
+    color: #dd7627;
+    background-color: #21333f;
+    border-right: 0;
+    /*border-bottom: 2px solid #dd7627;*/
+    z-index: 2;
+  }
+}
+
+
+
+[type=radio]:checked ~ label {
+  color: #dd7627;
+  background-color: #21333f;
+  /*border-bottom: 2px solid #dd7627;*/
+  z-index: 2;
+}
+[type=radio]:checked ~ label ~ .service_content {
+  z-index: 1;
+}
+
+
+/** BRAYTON ACADEMY CARDS **/
+
+.section .content .training-anim {
+  -webkit-transform: translateY(-101%);
+  -ms-transform: translateY(-101%);
+  transform: translateY(-101%);
+  -webkit-transition: 0.45s;
+  transition: 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.52, 0.42, 0, 1.01);
+  transition-timing-function: cubic-bezier(0.52, 0.42, 0, 1.01);
+  -webkit-transition-delay: 00s;
+  transition-delay: 00s;
+  box-shadow: 0 0 2px transparent;
+  opacity: 0;
+}
+
+.section.active .content .training-anim {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-transition-delay: 1s;
+  transition-delay: .5s;
+  opacity: 100%;
+}
+
+.training-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 20em;
+  width: 60px;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-radius: 50px;
+  transform: rotate(45deg);
+  padding: 1em;
+  font-family: "Roboto", "Helvetica", sans-serif;
+  font-weight: bold;
+  box-shadow: 10px 10px 30px black;
+}
+
+.number-circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg);
+  padding: 1em;
+  box-shadow: 5px 5px 15px black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+.training-name {
+  color: white;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  text-align: right;
+  height: 100%;
+}
 
 /* .page-menu.menu-visible changed left value */
