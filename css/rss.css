@@ -35,6 +35,8 @@
 .item{
     border-left: 1px solid rgba(0, 0, 0, 0.12);
     border: 1px solid grey;
+    background-color: #21333f;
+    box-shadow: 5px 5px 10px black;
 }
 
 .item tr {
