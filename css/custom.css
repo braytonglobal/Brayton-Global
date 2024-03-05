@@ -572,3 +572,12 @@ a:focus, a:hover {
     height: 75px;
     bottom: 0;
 }
+
+.service_content li{
+    list-style-type: circle;
+    margin-bottom: 0.2em;
+}
+
+.service_content h3{
+    font-size: 1.2em;
+}
